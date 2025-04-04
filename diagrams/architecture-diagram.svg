@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
+  <!-- Definições de gradientes -->
+  <defs>
+    <linearGradient id="primary-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006d6d" />
+      <stop offset="100%" stop-color="#003535" />
+    </linearGradient>
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9b78" />
+      <stop offset="100%" stop-color="#dd5c30" />
+    </linearGradient>
+    <linearGradient id="health-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ffcc" />
+      <stop offset="100%" stop-color="#00b894" />
+    </linearGradient>
+    <linearGradient id="sleep-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d6a2e8" />
+      <stop offset="100%" stop-color="#9b59b6" />
+    </linearGradient>
+    <linearGradient id="work-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#74b9ff" />
+      <stop offset="100%" stop-color="#3498db" />
+    </linearGradient>
+    <linearGradient id="finance-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffeaa7" />
+      <stop offset="100%" stop-color="#f39c12" />
+    </linearGradient>
+    <linearGradient id="personal-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fd79a8" />
+      <stop offset="100%" stop-color="#e84393" />
+    </linearGradient>
+
+    <!-- Sombra para elementos -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="1000" height="800" fill="#121212" />
+  
+  <!-- Título do diagrama -->
+  <text x="500" y="50" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">Arquitetura Modular do Ecossistema Systentando</text>
+  
+  <!-- Camada Core -->
+  <rect x="100" y="100" width="800" height="150" rx="10" ry="10" fill="url(#primary-gradient)" filter="url(#shadow)" />
+  <text x="500" y="125" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">SYSTENTANDO CORE</text>
+  
+  <!-- Módulos Core -->
+  <rect x="120" y="145" width="150" height="80" rx="5" ry="5" fill="#004f4f" stroke="#ffffff" stroke-width="1" />
+  <text x="195" y="175" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">UI Kit</text>
+  <text x="195" y="195" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Componentes Reutilizáveis</text>
+  
+  <rect x="290" y="145" width="150" height="80" rx="5" ry="5" fill="#004f4f" stroke="#ffffff" stroke-width="1" />
+  <text x="365" y="175" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">API Core</text>
+  <text x="365" y="195" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Abstração de Serviços</text>
+  
+  <rect x="460" y="145" width="150" height="80" rx="5" ry="5" fill="#004f4f" stroke="#ffffff" stroke-width="1" />
+  <text x="535" y="175" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Data Core</text>
+  <text x="535" y="195" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Modelos e Persistência</text>
+  
+  <rect x="630" y="145" width="150" height="80" rx="5" ry="5" fill="#004f4f" stroke="#ffffff" stroke-width="1" />
+  <text x="705" y="175" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">AI Core</text>
+  <text x="705" y="195" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Agentes e Integração LLM</text>
+  
+  <!-- Systentando One (Plataforma Integradora) -->
+  <rect x="200" y="280" width="600" height="100" rx="10" ry="10" fill="url(#accent-gradient)" filter="url(#shadow)" />
+  <text x="500" y="320" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">SYSTENTANDO ONE</text>
+  <text x="500" y="345" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Plataforma Integradora e Experiência Unificada</text>
+  
+  <!-- Linha conectando Core ao Systentando One -->
+  <line x1="500" y1="250" x2="500" y2="280" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Produtos específicos -->
+  <rect x="120" y="420" width="180" height="120" rx="10" ry="10" fill="url(#health-gradient)" filter="url(#shadow)" />
+  <text x="210" y="450" font-family="Arial, sans-serif" font-size="16" fill="#121212" text-anchor="middle" font-weight="bold">ZEN Launcher</text>
+  <text x="210" y="470" font-family="Arial, sans-serif" font-size="10" fill="#121212" text-anchor="middle">Hábitos e Produtividade</text>
+  <rect x="140" y="485" width="140" height="40" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="210" y="510" font-family="Arial, sans-serif" font-size="12" fill="#121212" text-anchor="middle">Agentes de Hábitos</text>
+  
+  <rect x="320" y="420" width="180" height="120" rx="10" ry="10" fill="url(#sleep-gradient)" filter="url(#shadow)" />
+  <text x="410" y="450" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Meu Nutri</text>
+  <text x="410" y="470" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Nutrição e Saúde</text>
+  <rect x="340" y="485" width="140" height="40" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="410" y="510" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Agentes Nutricionais</text>
+  
+  <rect x="520" y="420" width="180" height="120" rx="10" ry="10" fill="url(#finance-gradient)" filter="url(#shadow)" />
+  <text x="610" y="450" font-family="Arial, sans-serif" font-size="16" fill="#121212" text-anchor="middle" font-weight="bold">Momento Investimento</text>
+  <text x="610" y="470" font-family="Arial, sans-serif" font-size="10" fill="#121212" text-anchor="middle">Finanças e Investimentos</text>
+  <rect x="540" y="485" width="140" height="40" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="610" y="510" font-family="Arial, sans-serif" font-size="12" fill="#121212" text-anchor="middle">Agentes Financeiros</text>
+  
+  <rect x="720" y="420" width="180" height="120" rx="10" ry="10" fill="url(#personal-gradient)" filter="url(#shadow)" />
+  <text x="810" y="450" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Saúde e Bem-estar</text>
+  <text x="810" y="470" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Condicionamento e Fitness</text>
+  <rect x="740" y="485" width="140" height="40" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="810" y="510" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Agentes de Bem-estar</text>
+  
+  <!-- Linhas conectando Systentando One aos Produtos -->
+  <line x1="210" y1="380" x2="210" y2="420" stroke="#00b894" stroke-width="2" />
+  <line x1="410" y1="380" x2="410" y2="420" stroke="#9b59b6" stroke-width="2" />
+  <line x1="610" y1="380" x2="610" y2="420" stroke="#f39c12" stroke-width="2" />
+  <line x1="810" y1="380" x2="810" y2="420" stroke="#e84393" stroke-width="2" />
+  
+  <!-- Camada de Infraestrutura -->
+  <rect x="100" y="580" width="800" height="100" rx="10" ry="10" fill="#1e1e1e" stroke="#333333" stroke-width="2" filter="url(#shadow)" />
+  <text x="500" y="610" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">INFRAESTRUTURA</text>
+  
+  <!-- Componentes de Infraestrutura -->
+  <rect x="120" y="630" width="120" height="40" rx="5" ry="5" fill="#333333" stroke="#666666" stroke-width="1" />
+  <text x="180" y="655" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">DevOps</text>
+  
+  <rect x="260" y="630" width="120" height="40" rx="5" ry="5" fill="#333333" stroke="#666666" stroke-width="1" />
+  <text x="320" y="655" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">CI/CD</text>
+  
+  <rect x="400" y="630" width="120" height="40" rx="5" ry="5" fill="#333333" stroke="#666666" stroke-width="1" />
+  <text x="460" y="655" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Monitoramento</text>
+  
+  <rect x="540" y="630" width="120" height="40" rx="5" ry="5" fill="#333333" stroke="#666666" stroke-width="1" />
+  <text x="600" y="655" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Segurança</text>
+  
+  <rect x="680" y="630" width="120" height="40" rx="5" ry="5" fill="#333333" stroke="#666666" stroke-width="1" />
+  <text x="740" y="655" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Cloud</text>
+  
+  <!-- Ferramentas de Desenvolvimento -->
+  <rect x="100" y="710" width="800" height="60" rx="5" ry="5" fill="#333333" stroke="#666666" stroke-width="1" />
+  <text x="500" y="740" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">FERRAMENTAS DE DESENVOLVIMENTO (DevPack, Generators, Testing)</text>
+  
+  <!-- Legenda -->
+  <rect x="850" y="720" width="20" height="20" fill="url(#primary-gradient)" />
+  <text x="875" y="735" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">Core</text>
+  
+  <rect x="850" y="750" width="20" height="20" fill="url(#accent-gradient)" />
+  <text x="875" y="765" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">Integrador</text>
+  
+  <rect x="920" y="720" width="20" height="20" fill="url(#health-gradient)" />
+  <text x="945" y="735" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">Produtividade</text>
+  
+  <rect x="920" y="750" width="20" height="20" fill="url(#personal-gradient)" />
+  <text x="945" y="765" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">Bem-estar</text>
+</svg>

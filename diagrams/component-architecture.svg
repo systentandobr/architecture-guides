@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
+  <!-- Definições de gradientes -->
+  <defs>
+    <linearGradient id="primary-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006d6d" />
+      <stop offset="100%" stop-color="#003535" />
+    </linearGradient>
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9b78" />
+      <stop offset="100%" stop-color="#dd5c30" />
+    </linearGradient>
+    <linearGradient id="module-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e1e" />
+      <stop offset="100%" stop-color="#333333" />
+    </linearGradient>
+    
+    <linearGradient id="chatbot-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00b894" />
+      <stop offset="100%" stop-color="#00896e" />
+    </linearGradient>
+
+    <!-- Sombra para elementos -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="1000" height="800" fill="#121212" />
+  
+  <!-- Título do diagrama -->
+  <text x="500" y="50" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">Arquitetura de Componentes com Chatbot Integration</text>
+  
+  <!-- Frontend Architecture Section -->
+  <rect x="50" y="100" width="400" height="630" rx="10" ry="10" fill="#1e1e1e" stroke="#333333" stroke-width="2" />
+  <text x="250" y="130" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">Frontend</text>
+  
+  <!-- Modern Component Architecture -->
+  <rect x="70" y="160" width="360" height="350" rx="5" ry="5" fill="#333333" />
+  <text x="250" y="180" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Modern Component Architecture</text>
+  
+  <!-- Core Components -->
+  <rect x="90" y="200" width="320" height="60" rx="5" ry="5" fill="url(#primary-gradient)" />
+  <text x="120" y="235" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Core</text>
+  <text x="250" y="235" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Tokens, Primitives, Foundations</text>
+  
+  <!-- Composite Components -->
+  <rect x="90" y="270" width="320" height="60" rx="5" ry="5" fill="url(#primary-gradient)" />
+  <text x="120" y="305" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Composites</text>
+  <text x="250" y="305" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Chatbot, Cards, Interactive Elements</text>
+  
+  <!-- Feature Components -->
+  <rect x="90" y="340" width="320" height="60" rx="5" ry="5" fill="url(#primary-gradient)" />
+  <text x="120" y="375" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Features</text>
+  <text x="250" y="375" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Product-specific Modules, Flows</text>
+  
+  <!-- Views -->
+  <rect x="90" y="410" width="320" height="60" rx="5" ry="5" fill="url(#primary-gradient)" />
+  <text x="120" y="445" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Views</text>
+  <text x="250" y="445" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Screens, Pages, Layouts</text>
+  
+  <!-- Setas conectando os níveis -->
+  <polygon points="250,260 240,260 250,270 260,260" fill="#ffffff" />
+  <polygon points="250,330 240,330 250,340 260,330" fill="#ffffff" />
+  <polygon points="250,400 240,400 250,410 260,400" fill="#ffffff" />
+  
+  <!-- Chatbot Integration -->
+  <rect x="70" y="520" width="360" height="180" rx="5" ry="5" fill="#333333" />
+  <text x="250" y="540" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Chatbot Data Collection</text>
+  
+  <!-- Chatbot Interface -->
+  <rect x="90" y="560" width="320" height="120" rx="5" ry="5" fill="url(#chatbot-gradient)" />
+  
+  <!-- Camadas do Chatbot -->
+  <rect x="100" y="570" width="300" height="30" rx="5" ry="5" fill="rgba(255,255,255,0.1)" />
+  <text x="165" y="590" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Conversation Interface</text>
+  
+  <rect x="100" y="605" width="145" height="65" rx="5" ry="5" fill="rgba(255,255,255,0.1)" />
+  <text x="172" y="625" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">User Inputs</text>
+  
+  <rect x="255" y="605" width="145" height="65" rx="5" ry="5" fill="rgba(255,255,255,0.1)" />
+  <text x="327" y="625" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Data Extraction</text>
+  
+  <text x="172" y="650" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Natural Dialog</text>
+  <text x="327" y="650" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Schema Mapping</text>
+  
+  <!-- Backend Architecture Section -->
+  <rect x="550" y="100" width="400" height="630" rx="10" ry="10" fill="#1e1e1e" stroke="#333333" stroke-width="2" />
+  <text x="750" y="130" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">Backend</text>
+  
+  <!-- Hexagonal Architecture -->
+  <rect x="570" y="160" width="360" height="350" rx="5" ry="5" fill="#333333" />
+  <text x="750" y="180" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Arquitetura Hexagonal</text>
+  
+  <!-- Core Domain -->
+  <circle cx="750" cy="320" r="100" fill="url(#primary-gradient)" />
+  <text x="750" y="325" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Domain Core</text>
+  
+  <!-- Ports -->
+  <circle cx="750" cy="320" r="130" fill="none" stroke="#ff7d50" stroke-width="3" stroke-dasharray="10,5" />
+  <text x="750" y="215" font-family="Arial, sans-serif" font-size="14" fill="#ff7d50" text-anchor="middle">Ports</text>
+  
+  <!-- Adapters -->
+  <!-- API Adapter -->
+  <rect x="620" y="200" width="100" height="50" rx="10" ry="10" fill="url(#accent-gradient)" />
+  <text x="670" y="230" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">API Adapter</text>
+  
+  <!-- Repository Adapter -->
+  <rect x="780" y="200" width="100" height="50" rx="10" ry="10" fill="url(#accent-gradient)" />
+  <text x="830" y="230" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Repository</text>
+  
+  <!-- Event Adapter -->
+  <rect x="620" y="390" width="100" height="50" rx="10" ry="10" fill="url(#accent-gradient)" />
+  <text x="670" y="420" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Event Adapter</text>
+  
+  <!-- LLM Adapter -->
+  <rect x="780" y="390" width="100" height="50" rx="10" ry="10" fill="url(#chatbot-gradient)" />
+  <text x="830" y="420" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">LLM Adapter</text>
+  
+  <!-- Connecting lines -->
+  <line x1="670" y1="250" x2="710" y2="290" stroke="#ffffff" stroke-width="2" />
+  <line x1="830" y1="250" x2="790" y2="290" stroke="#ffffff" stroke-width="2" />
+  <line x1="670" y1="390" x2="710" y2="350" stroke="#ffffff" stroke-width="2" />
+  <line x1="830" y1="390" x2="790" y2="350" stroke="#ffffff" stroke-width="2" />
+  
+  <!-- AI Integration -->
+  <rect x="570" y="520" width="360" height="180" rx="5" ry="5" fill="#333333" />
+  <text x="750" y="540" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Agentes Especialistas</text>
+  
+  <!-- Meta Agent -->
+  <rect x="590" y="560" width="100" height="120" rx="5" ry="5" fill="url(#module-gradient)" />
+  <text x="640" y="580" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Meta Agent</text>
+  <rect x="600" y="590" width="80" height="25" rx="5" ry="5" fill="#004f4f" />
+  <text x="640" y="607" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Orchestrator</text>
+  <rect x="600" y="620" width="80" height="25" rx="5" ry="5" fill="#004f4f" />
+  <text x="640" y="637" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Router</text>
+  <rect x="600" y="650" width="80" height="25" rx="5" ry="5" fill="#004f4f" />
+  <text x="640" y="667" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Memory</text>
+  
+  <!-- Domain Agents -->
+  <rect x="700" y="560" width="100" height="120" rx="5" ry="5" fill="url(#module-gradient)" />
+  <text x="750" y="580" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Domain Agents</text>
+  <rect x="710" y="590" width="80" height="25" rx="5" ry="5" fill="#004f4f" />
+  <text x="750" y="607" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Health</text>
+  <rect x="710" y="620" width="80" height="25" rx="5" ry="5" fill="#004f4f" />
+  <text x="750" y="637" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Nutrition</text>
+  <rect x="710" y="650" width="80" height="25" rx="5" ry="5" fill="#004f4f" />
+  <text x="750" y="667" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Finance</text>
+  
+  <!-- LLM Integration -->
+  <rect x="810" y="560" width="100" height="120" rx="5" ry="5" fill="url(#module-gradient)" />
+  <text x="860" y="580" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">LLM Integration</text>
+  <rect x="820" y="590" width="80" height="25" rx="5" ry="5" fill="#004f4f" />
+  <text x="860" y="607" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Prompt Eng.</text>
+  <rect x="820" y="620" width="80" height="25" rx="5" ry="5" fill="#004f4f" />
+  <text x="860" y="637" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Context Mgmt</text>
+  <rect x="820" y="650" width="80" height="25" rx="5" ry="5" fill="#004f4f" />
+  <text x="860" y="667" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Providers</text>
+  
+  <!-- Communication lines -->
+  <line x1="690" y1="620" x2="710" y2="620" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="800" y1="620" x2="820" y2="620" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Integration Between Frontend and Backend -->
+  <line x1="450" y1="400" x2="550" y2="400" stroke="#ff7d50" stroke-width="3" />
+  
+  <!-- Chatbot to LLM Integration -->
+  <path d="M450,620 C500,620 500,620 550,620" stroke="#00b894" stroke-width="3" stroke-dasharray="10,5" />
+  
+  <!-- Integration Labels -->
+  <rect x="475" y="380" width="50" height="20" rx="5" ry="5" fill="#333333" />
+  <text x="500" y="395" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">API</text>
+  
+  <rect x="475" y="600" width="50" height="20" rx="5" ry="5" fill="#333333" />
+  <text x="500" y="615" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">LLM</text>
+</svg>

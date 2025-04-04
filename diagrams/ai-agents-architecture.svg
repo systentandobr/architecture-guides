@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
+  <!-- Definições de gradientes -->
+  <defs>
+    <linearGradient id="primary-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006d6d" />
+      <stop offset="100%" stop-color="#003535" />
+    </linearGradient>
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9b78" />
+      <stop offset="100%" stop-color="#dd5c30" />
+    </linearGradient>
+    <linearGradient id="health-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00b894" />
+      <stop offset="100%" stop-color="#009b79" />
+    </linearGradient>
+    <linearGradient id="nutrition-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d6a2e8" />
+      <stop offset="100%" stop-color="#9b59b6" />
+    </linearGradient>
+    <linearGradient id="finance-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffeaa7" />
+      <stop offset="100%" stop-color="#f39c12" />
+    </linearGradient>
+    <linearGradient id="meta-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a29bfe" />
+      <stop offset="100%" stop-color="#6c5ce7" />
+    </linearGradient>
+
+    <!-- Sombra para elementos -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="1000" height="800" fill="#121212" />
+  
+  <!-- Título -->
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">Arquitetura de Agentes IA no Systentando</text>
+
+  <!-- Systentando One -->
+  <rect x="150" y="70" width="700" height="150" rx="10" ry="10" fill="url(#accent-gradient)" filter="url(#shadow)" />
+  <text x="500" y="100" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">SYSTENTANDO ONE</text>
+  
+  <!-- Meta-Agent -->
+  <rect x="200" y="130" width="160" height="70" rx="5" ry="5" fill="url(#meta-gradient)" />
+  <text x="280" y="165" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Meta-Agente</text>
+  
+  <!-- Orchestrator -->
+  <rect x="420" y="130" width="160" height="70" rx="5" ry="5" fill="url(#meta-gradient)" />
+  <text x="500" y="165" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Orquestrador</text>
+  
+  <!-- Coordinator -->
+  <rect x="640" y="130" width="160" height="70" rx="5" ry="5" fill="url(#meta-gradient)" />
+  <text x="720" y="165" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Coordenador</text>
+  
+  <!-- Conectores -->
+  <line x1="360" y1="165" x2="420" y2="165" stroke="#ffffff" stroke-width="2" />
+  <polygon points="410,160 420,165 410,170" fill="#ffffff" />
+  
+  <line x1="580" y1="165" x2="640" y2="165" stroke="#ffffff" stroke-width="2" />
+  <polygon points="630,160 640,165 630,170" fill="#ffffff" />
+
+  <!-- Produtos Section -->
+  
+  <!-- ZEN Launcher -->
+  <rect x="150" y="260" width="300" height="220" rx="10" ry="10" fill="url(#health-gradient)" filter="url(#shadow)" />
+  <text x="300" y="290" font-family="Arial, sans-serif" font-size="18" fill="#121212" text-anchor="middle" font-weight="bold">ZEN Launcher</text>
+  
+  <rect x="170" y="310" width="260" height="50" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="300" y="340" font-family="Arial, sans-serif" font-size="14" fill="#121212" text-anchor="middle">Habit Coach</text>
+  
+  <rect x="170" y="370" width="260" height="50" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="300" y="400" font-family="Arial, sans-serif" font-size="14" fill="#121212" text-anchor="middle">Focus Agent</text>
+  
+  <rect x="170" y="430" width="260" height="40" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="300" y="455" font-family="Arial, sans-serif" font-size="14" fill="#121212" text-anchor="middle">Screen Time Monitor</text>
+  
+  <!-- Meu Nutri -->
+  <rect x="550" y="260" width="300" height="220" rx="10" ry="10" fill="url(#nutrition-gradient)" filter="url(#shadow)" />
+  <text x="700" y="290" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">Meu Nutri</text>
+  
+  <rect x="570" y="310" width="260" height="50" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="700" y="340" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Nutrition Advisor</text>
+  
+  <rect x="570" y="370" width="260" height="50" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="700" y="400" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Meal Planner</text>
+  
+  <rect x="570" y="430" width="260" height="40" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="700" y="455" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Diet Analyzer</text>
+  
+  <!-- Momento do Investimento -->
+  <rect x="150" y="520" width="300" height="220" rx="10" ry="10" fill="url(#finance-gradient)" filter="url(#shadow)" />
+  <text x="300" y="550" font-family="Arial, sans-serif" font-size="18" fill="#121212" text-anchor="middle" font-weight="bold">Momento do Investimento</text>
+  
+  <rect x="170" y="570" width="260" height="50" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="300" y="600" font-family="Arial, sans-serif" font-size="14" fill="#121212" text-anchor="middle">Investment Advisor</text>
+  
+  <rect x="170" y="630" width="260" height="50" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="300" y="660" font-family="Arial, sans-serif" font-size="14" fill="#121212" text-anchor="middle">Risk Analyst</text>
+  
+  <rect x="170" y="690" width="260" height="40" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="300" y="715" font-family="Arial, sans-serif" font-size="14" fill="#121212" text-anchor="middle">Market Trends Agent</text>
+  
+  <!-- Saúde e Bem-estar -->
+  <rect x="550" y="520" width="300" height="220" rx="10" ry="10" fill="url(#primary-gradient)" filter="url(#shadow)" />
+  <text x="700" y="550" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">Saúde e Bem-estar</text>
+  
+  <rect x="570" y="570" width="260" height="50" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="700" y="600" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Fitness Coach</text>
+  
+  <rect x="570" y="630" width="260" height="50" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="700" y="660" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Sleep Optimizer</text>
+  
+  <rect x="570" y="690" width="260" height="40" rx="5" ry="5" fill="rgba(0,0,0,0.2)" />
+  <text x="700" y="715" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Wellness Monitor</text>
+  
+  <!-- Connectores -->
+  <line x1="280" y1="200" x2="280" y2="260" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="720" y1="200" x2="720" y2="260" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="280" y1="480" x2="280" y2="520" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="720" y1="480" x2="720" y2="520" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Meta-Agent com produtos -->
+  <path d="M280,200 C280,230 500,230 500,260" stroke="#6c5ce7" stroke-width="2" stroke-dasharray="5,5" />
+  <path d="M280,200 C280,230 100,460 300,520" stroke="#6c5ce7" stroke-width="2" stroke-dasharray="5,5" />
+  <path d="M720,200 C720,230 500,230 500,260" stroke="#6c5ce7" stroke-width="2" stroke-dasharray="5,5" />
+  <path d="M720,200 C720,230 900,460 700,520" stroke="#6c5ce7" stroke-width="2" stroke-dasharray="5,5" />
+</svg>

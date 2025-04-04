@@ -1,0 +1,9 @@
+node_modules
+dist
+.cache
+storybook-static
+.storybook/compile-results
+*.log
+
+# Arquivos de backup
+*.bak

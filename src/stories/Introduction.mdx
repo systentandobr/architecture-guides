@@ -1,0 +1,72 @@
+import { Meta, Story, Canvas, Description } from '@storybook/blocks';
+import { Button } from './Button';
+
+<Meta title="Introduction/Getting Started" />
+
+# Bem-vindo ao Systentando UI
+
+Esta é a documentação oficial dos componentes do ecossistema Systentando.
+
+## Princípios de Design
+
+O sistema de design do Systentando é baseado em três princípios fundamentais:
+
+1. **Modularidade**: Componentes independentes e reutilizáveis
+2. **Consistência**: Experiência visual unificada em todos os produtos
+3. **Acessibilidade**: Design inclusivo para todos os usuários
+
+## Exemplo de Componente
+
+<Canvas>
+  <Story name="Primary Button">
+    <Button variant="primary">Botão Primário</Button>
+  </Story>
+</Canvas>
+
+## Começando
+
+Para utilizar os componentes em seu projeto:
+
+```jsx
+import { Button, Card, ChatbotCollector } from '@systentando/ui';
+
+function MyComponent() {
+  return (
+    <div>
+      <Card>
+        <h2>Meu Componente</h2>
+        <Button>Clique-me</Button>
+      </Card>
+    </div>
+  );
+}
+```
+
+## Temas por Produto
+
+Cada produto do ecossistema possui sua própria paleta de cores, sempre mantendo consistência com o design system geral:
+
+- **ZEN Launcher**: Foco em produtividade
+- **Meu Nutri**: Nutrição e bem-estar
+- **Momento do Investimento**: Finanças e investimentos
+- **Saúde e Bem-estar**: Fitness e saúde
+
+```
+
+## Executando o Storybook
+
+Para iniciar o Storybook em ambiente de desenvolvimento:
+
+```bash
+# Iniciar em modo de desenvolvimento
+npm run storybook
+
+# Construir versão estática para deploy
+npm run build-storybook
+```
+
+O Storybook estará disponível em `http://localhost:6006` por padrão.
+
+## Integração com Testes
+
+O Storybook pode ser integrado com testes para garantir a qualidade dos componentes:

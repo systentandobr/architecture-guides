@@ -1,0 +1,129 @@
+
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+
+<Meta title="Design System/Chatbot Themes" />
+
+# Temas do Chatbot
+
+O componente de chatbot do Systentando utiliza um sistema de temas consistente com a identidade visual da plataforma. Esse guia apresenta as principais cores e variações por domínio.
+
+## Paleta de Cores Principal
+
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="Cores principais"
+    colors={{
+      main: '#004f4f',
+      light: '#006d6d',
+      dark: '#003535',
+      contrastText: '#ffffff'
+    }}
+  />
+  <ColorItem
+    title="Accent"
+    subtitle="Cores de destaque"
+    colors={{
+      main: '#ff7d50',
+      light: '#ff9b78',
+      dark: '#dd5c30',
+      contrastText: '#ffffff'
+    }}
+  />
+  <ColorItem
+    title="Dark Theme"
+    subtitle="Tema escuro"
+    colors={{
+      background: '#121212',
+      card: '#1e1e1e',
+      border: '#333333',
+      text: '#ffffff',
+      subtext: '#aaaaaa'
+    }}
+  />
+</ColorPalette>
+
+## Cores por Domínio
+
+Cada produto do ecossistema Systentando possui uma paleta de cores própria, utilizada no chatbot correspondente:
+
+<ColorPalette>
+  <ColorItem
+    title="Health"
+    subtitle="Saúde e Bem-estar"
+    colors={{
+      main: '#00b894',
+      light: '#00ffcc',
+      dark: '#009b79',
+    }}
+  />
+  <ColorItem
+    title="Nutrition"
+    subtitle="Meu Nutri"
+    colors={{
+      main: '#9b59b6',
+      light: '#d6a2e8',
+      dark: '#8e44ad',
+    }}
+  />
+  <ColorItem
+    title="Finance"
+    subtitle="Momento do Investimento"
+    colors={{
+      main: '#f39c12',
+      light: '#ffeaa7',
+      dark: '#e67e22',
+    }}
+  />
+  <ColorItem
+    title="Productivity"
+    subtitle="ZEN Launcher"
+    colors={{
+      main: '#3498db',
+      light: '#74b9ff',
+      dark: '#2980b9',
+    }}
+  />
+</ColorPalette>
+
+## Uso de Cores no Chatbot
+
+O componente ChatbotCollector utiliza as cores de acordo com o domínio especificado:
+
+- **Header**: Utiliza a cor principal do domínio
+- **Mensagens do Assistente**: Utiliza um background mais claro da cor principal do domínio
+- **Botões de Sugestão**: Utiliza a cor principal do domínio
+- **Indicador de Progresso**: Utiliza a cor principal do domínio com variações de opacidade
+
+## Tokens Tipográficos
+
+O chatbot utiliza a seguinte tipografia:
+
+- **Títulos**: Inter, 20px, Bold
+- **Mensagens**: Inter, 16px, Regular
+- **Input**: Inter, 16px, Regular
+- **Prompts Sugeridos**: Inter, 14px, Medium
+
+## Espaçamento e Layout
+
+O componente de chatbot utiliza um sistema de espaçamento consistente:
+
+- **Space XS**: 4px
+- **Space S**: 8px
+- **Space M**: 16px
+- **Space L**: 24px
+- **Space XL**: 32px
+
+O layout interno do chatbot segue uma estrutura de grid flexível, permitindo adaptação a diferentes tamanhos de tela.
+
+## Responsividade
+
+O componente ChatbotCollector é totalmente responsivo:
+
+- **Desktop**: Layout completo com sugestões em linha
+- **Tablet**: Layout adaptativo com mensagens em largura proporcional
+- **Mobile**: Layout vertical com sugestões empilhadas
+
+## Acessibilidade
+
+Para garantir a acessibilidade, as cores do chatbot respeitam um contraste mínimo de 4.5:1 para texto e elementos interativos. Além disso, todos os componentes possuem atributos ARIA apropriados para leitores de tela.
