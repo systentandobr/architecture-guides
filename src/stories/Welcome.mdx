@@ -1,0 +1,86 @@
+import { Meta, Source, Unstyled } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+import * as HeaderStories from './Header.stories';
+
+<Meta title="Home" />
+
+<Unstyled>
+  <div style={{ margin: '0 auto', maxWidth: '800px', padding: '2rem' }}>
+    <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+      <img 
+        src="./stories/assets/systentando-logo.png" 
+        alt="Systentando Logo" 
+        style={{ maxWidth: '200px', height: 'auto', margin: '0 auto 1rem' }} 
+      />
+      <h1 style={{ fontWeight: 'bold', fontSize: '2.5rem' }}>Systentando Design System</h1>
+      <p style={{ fontSize: '1.2rem' }}>Documentação oficial de componentes e guias de arquitetura</p>
+    </div>
+
+    <div style={{ margin: '3rem 0', padding: '2rem', backgroundColor: '#f5f8fa', borderRadius: '8px' }}>
+      <h2 style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>Início rápido</h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+        <a href="/?path=/docs/introduction-getting-started--docs" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div style={{ padding: '1.5rem', backgroundColor: 'white', borderRadius: '6px', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
+            <h3 style={{ marginBottom: '0.5rem', fontSize: '1.1rem', fontWeight: 'bold' }}>Introdução</h3>
+            <p style={{ fontSize: '0.9rem' }}>Visão geral do sistema de design e princípios</p>
+          </div>
+        </a>
+        <a href="/?path=/docs/example-button--docs" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div style={{ padding: '1.5rem', backgroundColor: 'white', borderRadius: '6px', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
+            <h3 style={{ marginBottom: '0.5rem', fontSize: '1.1rem', fontWeight: 'bold' }}>Componentes</h3>
+            <p style={{ fontSize: '0.9rem' }}>Biblioteca completa de componentes reutilizáveis</p>
+          </div>
+        </a>
+        <a href="/?path=/docs/chatbot-chatmessage--docs" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div style={{ padding: '1.5rem', backgroundColor: 'white', borderRadius: '6px', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
+            <h3 style={{ marginBottom: '0.5rem', fontSize: '1.1rem', fontWeight: 'bold' }}>Chatbot</h3>
+            <p style={{ fontSize: '0.9rem' }}>Componentes para integração de chatbots</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <h2 style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>Instalação</h2>
+    <div style={{ padding: '1rem', backgroundColor: '#f0f0f0', borderRadius: '4px', marginBottom: '2rem' }}>
+      <Source language="bash" code="npm install @systentando/ui" />
+    </div>
+
+    <h2 style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>Uso básico</h2>
+    <div style={{ padding: '1rem', backgroundColor: '#f0f0f0', borderRadius: '4px', marginBottom: '2rem' }}>
+      <Source 
+        language="jsx" 
+        code={`
+import { Button } from '@systentando/ui';
+
+function App() {
+  return (
+    <div>
+      <Button primary label="Clique-me" />
+    </div>
+  );
+}
+        `} 
+      />
+    </div>
+
+    <h2 style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>Ecossistema Systentando</h2>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+      <div style={{ padding: '1.5rem', backgroundColor: '#004f4f', color: 'white', borderRadius: '6px' }}>
+        <h3 style={{ marginBottom: '0.5rem', fontSize: '1.1rem', fontWeight: 'bold' }}>ZEN Launcher</h3>
+        <p style={{ fontSize: '0.9rem' }}>Produtividade e foco</p>
+      </div>
+      <div style={{ padding: '1.5rem', backgroundColor: '#ff7d50', color: 'white', borderRadius: '6px' }}>
+        <h3 style={{ marginBottom: '0.5rem', fontSize: '1.1rem', fontWeight: 'bold' }}>Meu Nutri</h3>
+        <p style={{ fontSize: '0.9rem' }}>Nutrição e bem-estar</p>
+      </div>
+      <div style={{ padding: '1.5rem', backgroundColor: '#3b5998', color: 'white', borderRadius: '6px' }}>
+        <h3 style={{ marginBottom: '0.5rem', fontSize: '1.1rem', fontWeight: 'bold' }}>Momento do Investimento</h3>
+        <p style={{ fontSize: '0.9rem' }}>Finanças e investimentos</p>
+      </div>
+    </div>
+
+    <div style={{ textAlign: 'center', marginTop: '3rem', fontSize: '0.9rem', color: '#666' }}>
+      <p>© {new Date().getFullYear()} Systentando. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</Unstyled>

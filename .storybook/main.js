@@ -3,7 +3,8 @@
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
   "stories": [
-    "../src/**/*.mdx",
+    "../src/stories/Welcome.mdx",
+    "../src/stories/Introduction.mdx",
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
   "staticDirs": ['../public'],

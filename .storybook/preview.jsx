@@ -30,10 +30,9 @@ export const parameters = {
   options: {
     storySort: {
       order: [
+        'Home',
         'Introduction',
-        'Design System',
-        'Core',
-        'Composites',
+        'Example',
         'Chatbot',
         'AI',
         'Pages',
