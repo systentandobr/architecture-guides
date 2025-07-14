@@ -1,8 +1,32 @@
 /* globals.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Systentando Color Palette */
+  --color-primary: #00FFC8;
+  --color-secondary: #0066FF;
+  --color-success: #39FF14;
+  --color-error: #FF6B6B;
+  --color-warning: #FFD700;
+  --color-background: #121212;
+  --color-surface: #1a1a1a;
+  --color-text: #ffffff;
+  --color-text-secondary: #cccccc;
+  
+  /* Glow Effects */
+  --glow-primary: rgba(0, 255, 200, 0.3);
+  --glow-secondary: rgba(0, 102, 255, 0.3);
+  --glow-success: rgba(57, 255, 20, 0.4);
+  --glow-error: rgba(255, 107, 107, 0.4);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(45deg, #00FFC8, #0066FF);
+  --gradient-secondary: linear-gradient(135deg, #39FF14, #00FFC8);
+  --gradient-text: linear-gradient(45deg, #ffffff, #00FFC8, #ffffff);
 }
 
 * {
@@ -13,11 +37,74 @@
 
 body {
   font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
-/* System-wide utility classes */
+/* Animações inspiradas no systentando.com */
+@keyframes subtlePulse {
+  0% { 
+    opacity: 0.15; 
+  }
+  100% { 
+    opacity: 0.25; 
+  }
+}
+
+@keyframes neonGlow {
+  0% { 
+    box-shadow: 0 0 10px var(--glow-primary); 
+  }
+  100% { 
+    box-shadow: 0 0 30px var(--glow-primary), 0 0 40px var(--glow-primary); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-20px); 
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes loading-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes progressGlow {
+  0% { 
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.5); 
+  }
+  100% { 
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.8), 0 0 30px rgba(57, 255, 20, 0.6); 
+  }
+}
+
+/* Utility Classes */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -28,4 +115,187 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* Systentando-inspired components */
+.glow-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px var(--glow-primary);
+}
+
+.neon-border {
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 0 10px var(--glow-primary);
+}
+
+.glassmorphism {
+  background: rgba(10, 10, 20, 0.8);
+  border: 1px solid rgba(0, 255, 200, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+}
+
+.card-glow {
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 60px rgba(0, 255, 200, 0.2);
+}
+
+.button-primary {
+  background: var(--gradient-primary);
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 30px var(--glow-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 40px var(--glow-primary);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--color-text);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-secondary:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px var(--glow-primary);
+}
+
+/* Badge Styles */
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.badge-arena {
+  background: rgba(0, 255, 200, 0.1);
+  border: 1px solid #00FFC8;
+  color: #00FFC8;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.3);
+}
+
+.badge-level {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.9), rgba(255, 165, 0, 0.8));
+  border: 1px solid #FFD700;
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.badge-early {
+  background: #39FF1422;
+  border: 1px solid #39FF1477;
+  color: #39FF14;
+}
+
+.badge-exclusive {
+  background: #00FFFF22;
+  border: 1px solid #00FFFF77;
+  color: #00FFFF;
+}
+
+.badge-pioneer {
+  background: #FF6B6B22;
+  border: 1px solid #FF6B6B77;
+  color: #FF6B6B;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(0, 255, 200, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #39FF14, #00FFC8);
+  border-radius: 3px;
+  animation: progressGlow 2s ease-in-out infinite alternate;
+  transition: width 0.5s ease;
+}
+
+/* Grid Pattern Background */
+.grid-bg {
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 45px,
+      rgba(30, 30, 50, 0.3) 47px,
+      transparent 49px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 45px,
+      rgba(30, 30, 50, 0.3) 47px,
+      transparent 49px
+    );
+  animation: subtlePulse 8s ease-in-out infinite alternate;
+}
+
+/* Typography Utilities */
+.text-gradient {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-neon {
+  color: var(--color-primary);
+  text-shadow: 0 0 10px var(--glow-primary);
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .button-primary,
+  .button-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .badge {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
 }
