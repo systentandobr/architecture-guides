@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '../../components/design-system/Button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../../components/design-system/Card';
+import React from 'react';
 
 const meta: Meta = {
   title: 'Design System/Components',
@@ -341,6 +342,423 @@ export const ColorPalette: Story = {
           </div>
         </div>
       </div>
+    </div>
+  ),
+};
+
+// ===== STORIES BASEADAS NOS PROJETOS REAIS =====
+
+// Systentando Landing Page Components
+export const SystentandoNavigation: Story = {
+  render: () => (
+    <div className="ds-space-y-6">
+      <h3 className="ds-text-2xl ds-font-bold ds-text-systentando">Systentando Landing Page</h3>
+      
+      {/* Navigation Bar */}
+      <div className="ds-bg-gray-900 ds-p-6 ds-rounded-lg">
+        <div className="ds-flex ds-items-center ds-justify-between">
+          <div className="ds-text-gradient-systentando ds-text-xl ds-font-bold">
+            SYSTENTANDO
+          </div>
+          <nav className="ds-flex ds-gap-6">
+            <a href="#inicio" className="ds-text-white hover:ds-text-systentando">Início</a>
+            <a href="#processo" className="ds-text-white hover:ds-text-systentando">Como Funciona</a>
+            <a href="#principios" className="ds-text-white hover:ds-text-systentando">Princípios</a>
+            <a href="#ecossistema" className="ds-text-white hover:ds-text-systentando">Projetos</a>
+          </nav>
+          <div className="ds-flex ds-gap-4">
+            <Button variant="systentando" size="sm">Arena</Button>
+            <Button variant="accent" size="sm">Participe</Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <div className="ds-bg-gradient-systentando ds-p-8 ds-rounded-lg ds-text-white">
+        <h1 className="ds-text-4xl ds-font-bold ds-mb-4">Transforme sua Jornada Empreendedora</h1>
+        <p className="ds-text-xl ds-mb-6">Junte-se ao ecossistema que está revolucionando o empreendedorismo no Brasil</p>
+        <div className="ds-flex ds-gap-4">
+          <Button variant="systentando" size="lg">Começar Agora</Button>
+          <Button variant="outline" size="lg" className="ds-text-white ds-border-white hover:ds-bg-white hover:ds-text-systentando">
+            Saiba Mais
+          </Button>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+// Life Tracker Components
+export const LifeTrackerDashboard: Story = {
+  render: () => (
+    <div className="ds-space-y-6">
+      <h3 className="ds-text-2xl ds-font-bold ds-text-systentando">Life Tracker Dashboard</h3>
+      
+      {/* Health Category */}
+      <div className="ds-grid ds-grid-cols-1 ds-md:grid-cols-3 ds-gap-4">
+        <Card variant="health">
+          <CardHeader>
+            <CardTitle className="ds-text-health">🏥 Saúde</CardTitle>
+            <CardDescription>Monitore sua saúde física e mental</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="ds-space-y-2">
+              <div className="ds-flex ds-justify-between">
+                <span>Exercícios hoje:</span>
+                <span className="ds-font-semibold">30 min</span>
+              </div>
+              <div className="ds-flex ds-justify-between">
+                <span>Água consumida:</span>
+                <span className="ds-font-semibold">2.5L</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button variant="health" size="sm">Registrar</Button>
+          </CardFooter>
+        </Card>
+
+        <Card variant="sleep">
+          <CardHeader>
+            <CardTitle className="ds-text-sleep">😴 Sono</CardTitle>
+            <CardDescription>Controle sua qualidade do sono</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="ds-space-y-2">
+              <div className="ds-flex ds-justify-between">
+                <span>Duração:</span>
+                <span className="ds-font-semibold">7h 30min</span>
+              </div>
+              <div className="ds-flex ds-justify-between">
+                <span>Qualidade:</span>
+                <span className="ds-font-semibold">85%</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button variant="sleep" size="sm">Ajustar</Button>
+          </CardFooter>
+        </Card>
+
+        <Card variant="personal">
+          <CardHeader>
+            <CardTitle className="ds-text-personal">📚 Desenvolvimento</CardTitle>
+            <CardDescription>Seu crescimento pessoal</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="ds-space-y-2">
+              <div className="ds-flex ds-justify-between">
+                <span>Leitura:</span>
+                <span className="ds-font-semibold">45 min</span>
+              </div>
+              <div className="ds-flex ds-justify-between">
+                <span>Estudos:</span>
+                <span className="ds-font-semibold">2h</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button variant="personal" size="sm">Continuar</Button>
+          </CardFooter>
+        </Card>
+      </div>
+    </div>
+  ),
+};
+
+// Viral Kids E-commerce Components
+export const ViralKidsStore: Story = {
+  render: () => (
+    <div className="ds-space-y-6">
+      <h3 className="ds-text-2xl ds-font-bold ds-text-systentando">Viral Kids Store</h3>
+      
+      {/* Product Cards */}
+      <div className="ds-grid ds-grid-cols-1 ds-md:grid-cols-2 ds-lg:grid-cols-3 ds-gap-6">
+        <Card variant="bronze">
+          <CardHeader>
+            <div className="ds-text-center">
+              <div className="ds-w-16 ds-h-16 ds-bg-gradient-bronze ds-rounded-lg ds-mx-auto ds-mb-4"></div>
+              <CardTitle className="ds-text-bronze">Kit Educativo Premium</CardTitle>
+              <CardDescription>Desenvolvimento infantil completo</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="ds-text-center ds-space-y-2">
+              <div className="ds-text-2xl ds-font-bold ds-text-bronze">R$ 299,90</div>
+              <div className="ds-text-sm ds-text-gray-600">ou 12x de R$ 24,99</div>
+              <div className="ds-flex ds-justify-center ds-gap-2">
+                <span className="ds-bg-bronze ds-text-white ds-px-2 ds-py-1 ds-rounded ds-text-xs">⭐ 4.9</span>
+                <span className="ds-bg-bronze ds-text-white ds-px-2 ds-py-1 ds-rounded ds-text-xs">🔥 Mais Vendido</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter className="ds-flex ds-gap-2">
+            <Button variant="bronze" className="ds-flex-1">Comprar</Button>
+            <Button variant="outline" size="icon">❤️</Button>
+          </CardFooter>
+        </Card>
+
+        <Card variant="default">
+          <CardHeader>
+            <div className="ds-text-center">
+              <div className="ds-w-16 ds-h-16 ds-bg-gold ds-rounded-lg ds-mx-auto ds-mb-4"></div>
+              <CardTitle>Coleção Limitada</CardTitle>
+              <CardDescription>Edição especial de fim de ano</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="ds-text-center ds-space-y-2">
+              <div className="ds-text-2xl ds-font-bold">R$ 199,90</div>
+              <div className="ds-text-sm ds-text-gray-600">ou 10x de R$ 19,99</div>
+              <div className="ds-flex ds-justify-center ds-gap-2">
+                <span className="ds-bg-gold ds-text-black ds-px-2 ds-py-1 ds-rounded ds-text-xs">⭐ 4.8</span>
+                <span className="ds-bg-gold ds-text-black ds-px-2 ds-py-1 ds-rounded ds-text-xs">✨ Exclusivo</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter className="ds-flex ds-gap-2">
+            <Button variant="gold" className="ds-flex-1">Comprar</Button>
+            <Button variant="outline" size="icon">❤️</Button>
+          </CardFooter>
+        </Card>
+
+        <Card variant="bronze">
+          <CardHeader>
+            <div className="ds-text-center">
+              <div className="ds-w-16 ds-h-16 ds-bg-copper ds-rounded-lg ds-mx-auto ds-mb-4"></div>
+              <CardTitle className="ds-text-bronze">Acessórios Premium</CardTitle>
+              <CardDescription>Complementos para o kit</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="ds-text-center ds-space-y-2">
+              <div className="ds-text-2xl ds-font-bold ds-text-bronze">R$ 89,90</div>
+              <div className="ds-text-sm ds-text-gray-600">ou 6x de R$ 14,99</div>
+              <div className="ds-flex ds-justify-center ds-gap-2">
+                <span className="ds-bg-copper ds-text-white ds-px-2 ds-py-1 ds-rounded ds-text-xs">⭐ 4.7</span>
+                <span className="ds-bg-copper ds-text-white ds-px-2 ds-py-1 ds-rounded ds-text-xs">🎁 Oferta</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter className="ds-flex ds-gap-2">
+            <Button variant="bronze" className="ds-flex-1">Comprar</Button>
+            <Button variant="outline" size="icon">❤️</Button>
+          </CardFooter>
+        </Card>
+      </div>
+
+      {/* WhatsApp Integration */}
+      <div className="ds-bg-gray-100 ds-p-6 ds-rounded-lg">
+        <h4 className="ds-text-lg ds-font-semibold ds-mb-4">Integração WhatsApp</h4>
+        <div className="ds-flex ds-gap-4">
+          <Button variant="whatsapp" size="lg" className="ds-bg-green-500 hover:ds-bg-green-600">
+            💬 Falar no WhatsApp
+          </Button>
+          <Button variant="bronze" size="lg">
+            📞 Ligar Agora
+          </Button>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+// Gamer Theme Components
+export const GamerInterface: Story = {
+  render: () => (
+    <div className="ds-bg-gray-900 ds-p-8 ds-rounded-lg">
+      <h3 className="ds-text-2xl ds-font-bold ds-text-neon-blue ds-mb-6">Gamer Interface</h3>
+      
+      {/* Gaming Dashboard */}
+      <div className="ds-grid ds-grid-cols-1 ds-md:grid-cols-2 ds-gap-6">
+        <Card variant="gamer">
+          <CardHeader>
+            <CardTitle className="ds-text-neon-blue">🎮 Player Stats</CardTitle>
+            <CardDescription>Suas estatísticas de jogo</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="ds-space-y-4">
+              <div className="ds-flex ds-justify-between">
+                <span>Level:</span>
+                <span className="ds-text-neon-green ds-font-bold">42</span>
+              </div>
+              <div className="ds-flex ds-justify-between">
+                <span>XP:</span>
+                <span className="ds-text-neon-purple ds-font-bold">15,420</span>
+              </div>
+              <div className="ds-flex ds-justify-between">
+                <span>Rank:</span>
+                <span className="ds-text-neon-pink ds-font-bold">Gold</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button variant="neon" size="sm">Jogar</Button>
+          </CardFooter>
+        </Card>
+
+        <Card variant="gamer">
+          <CardHeader>
+            <CardTitle className="ds-text-neon-blue">🏆 Achievements</CardTitle>
+            <CardDescription>Conquistas desbloqueadas</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="ds-space-y-2">
+              <div className="ds-flex ds-items-center ds-gap-2">
+                <span className="ds-text-neon-green">✅</span>
+                <span>First Steps</span>
+              </div>
+              <div className="ds-flex ds-items-center ds-gap-2">
+                <span className="ds-text-neon-purple">✅</span>
+                <span>Power User</span>
+              </div>
+              <div className="ds-flex ds-items-center ds-gap-2">
+                <span className="ds-text-neon-pink">🔒</span>
+                <span>Master Level</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button variant="gamer" size="sm">Ver Todas</Button>
+          </CardFooter>
+        </Card>
+      </div>
+
+      {/* Gaming Controls */}
+      <div className="ds-mt-6 ds-flex ds-gap-4 ds-justify-center">
+        <Button variant="neon" size="lg">🎯 Start Game</Button>
+        <Button variant="gamer" size="lg">⚙️ Settings</Button>
+        <Button variant="neon" size="lg">🏆 Leaderboard</Button>
+      </div>
+    </div>
+  ),
+};
+
+// Meu Nutri Components
+export const MeuNutriApp: Story = {
+  render: () => (
+    <div className="ds-space-y-6">
+      <h3 className="ds-text-2xl ds-font-bold ds-text-systentando">Meu Nutri App</h3>
+      
+      {/* Nutrition Cards */}
+      <div className="ds-grid ds-grid-cols-1 ds-md:grid-cols-2 ds-gap-4">
+        <Card variant="health">
+          <CardHeader>
+            <CardTitle className="ds-text-health">🥗 Refeições Hoje</CardTitle>
+            <CardDescription>Seu plano nutricional personalizado</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="ds-space-y-3">
+              <div className="ds-flex ds-justify-between ds-items-center">
+                <span>🌅 Café da Manhã</span>
+                <span className="ds-text-health ds-font-semibold">✓ Concluído</span>
+              </div>
+              <div className="ds-flex ds-justify-between ds-items-center">
+                <span>🌞 Almoço</span>
+                <span className="ds-text-warning">⏰ Em andamento</span>
+              </div>
+              <div className="ds-flex ds-justify-between ds-items-center">
+                <span>🌙 Jantar</span>
+                <span className="ds-text-gray-500">⏳ Pendente</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button variant="health" size="sm">Registrar Refeição</Button>
+          </CardFooter>
+        </Card>
+
+        <Card variant="personal">
+          <CardHeader>
+            <CardTitle className="ds-text-personal">📊 Metas Nutricionais</CardTitle>
+            <CardDescription>Acompanhe seu progresso</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="ds-space-y-3">
+              <div className="ds-flex ds-justify-between">
+                <span>Calorias:</span>
+                <span className="ds-font-semibold">1,200 / 1,800</span>
+              </div>
+              <div className="ds-flex ds-justify-between">
+                <span>Proteínas:</span>
+                <span className="ds-font-semibold">45g / 60g</span>
+              </div>
+              <div className="ds-flex ds-justify-between">
+                <span>Hidratação:</span>
+                <span className="ds-font-semibold">1.5L / 2.0L</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button variant="personal" size="sm">Ajustar Metas</Button>
+          </CardFooter>
+        </Card>
+      </div>
+    </div>
+  ),
+};
+
+// Design Patterns Discovery
+export const DesignPatterns: Story = {
+  render: () => (
+    <div className="ds-space-y-6">
+      <h3 className="ds-text-2xl ds-font-bold ds-text-systentando">Padrões de Design Descobertos</h3>
+      
+      {/* Color Usage Patterns */}
+      <Card variant="systentando">
+        <CardHeader>
+          <CardTitle>🎨 Padrões de Cores por Projeto</CardTitle>
+          <CardDescription>Como cada projeto usa suas cores específicas</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="ds-space-y-4">
+            <div>
+              <h4 className="ds-font-semibold ds-mb-2">Systentando Landing</h4>
+              <p className="ds-text-sm">Usa verde principal (#004f4f) para elementos de destaque e laranja accent (#ff7d50) para CTAs e interações.</p>
+            </div>
+            <div>
+              <h4 className="ds-font-semibold ds-mb-2">Life Tracker</h4>
+              <p className="ds-text-sm">Cada categoria tem sua cor: Saúde (verde), Sono (roxo), Pessoal (rosa), Trabalho (azul), Finanças (laranja).</p>
+            </div>
+            <div>
+              <h4 className="ds-font-semibold ds-mb-2">Viral Kids</h4>
+              <p className="ds-text-sm">Paleta bronze/elegante com gradientes dourados e tons terrosos para transmitir qualidade premium.</p>
+            </div>
+            <div>
+              <h4 className="ds-font-semibold ds-mb-2">Gamer Theme</h4>
+              <p className="ds-text-sm">Cores neon vibrantes (azul, roxo, verde, rosa) com fundos escuros para criar atmosfera cyberpunk.</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Component Patterns */}
+      <Card variant="bronze">
+        <CardHeader>
+          <CardTitle className="ds-text-bronze">🧩 Padrões de Componentes</CardTitle>
+          <CardDescription>Estruturas comuns encontradas nos projetos</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="ds-space-y-4">
+            <div>
+              <h4 className="ds-font-semibold ds-mb-2">Navigation Patterns</h4>
+              <p className="ds-text-sm">Todos os projetos usam navegação fixa com scroll detection e estados ativos.</p>
+            </div>
+            <div>
+              <h4 className="ds-font-semibold ds-mb-2">Card Patterns</h4>
+              <p className="ds-text-sm">Cards com header, content, footer e variantes por categoria/função.</p>
+            </div>
+            <div>
+              <h4 className="ds-font-semibold ds-mb-2">Button Patterns</h4>
+              <p className="ds-text-sm">Botões com variantes por função (primary, secondary, accent) e estados (loading, success).</p>
+            </div>
+            <div>
+              <h4 className="ds-font-semibold ds-mb-2">Integration Patterns</h4>
+              <p className="ds-text-sm">WhatsApp, gamificação, analytics e tracking são padrões comuns.</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   ),
 };
