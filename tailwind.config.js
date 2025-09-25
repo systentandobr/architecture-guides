@@ -4,8 +4,9 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
     './src/stories/**/*.{js,ts,jsx,tsx,mdx}',
     './.storybook/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: ['class'],
+  darkMode: 'class',
   theme: {
     container: {
       center: true,
