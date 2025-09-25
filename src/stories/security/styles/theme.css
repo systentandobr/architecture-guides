@@ -1,0 +1,985 @@
+/* src/stories/security/styles/theme.css */
+
+/* Variáveis CSS para temas */
+:root {
+  /* Cores do tema claro */
+  --security-bg-primary: #ffffff;
+  --security-bg-secondary: #f8f9fa;
+  --security-bg-tertiary: #e9ecef;
+  --security-text-primary: #212529;
+  --security-text-secondary: #495057;
+  --security-text-muted: #6c757d;
+  --security-border: #dee2e6;
+  --security-accent: #0d6efd;
+  --security-success: #198754;
+  --security-warning: #fd7e14;
+  --security-danger: #dc3545;
+  --security-info: #0dcaf0;
+}
+
+/* Tema escuro */
+[data-theme="dark"] {
+  --security-bg-primary: #1a1a1a;
+  --security-bg-secondary: #2d2d2d;
+  --security-bg-tertiary: #404040;
+  --security-text-primary: #ffffff;
+  --security-text-secondary: #e9ecef;
+  --security-text-muted: #adb5bd;
+  --security-border: #495057;
+  --security-accent: #0d6efd;
+  --security-success: #20c997;
+  --security-warning: #ffc107;
+  --security-danger: #dc3545;
+  --security-info: #0dcaf0;
+}
+
+/* Classes utilitárias para contraste */
+.security-container {
+  background-color: var(--security-bg-primary);
+  color: var(--security-text-primary);
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.security-title {
+  color: var(--security-text-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.security-subtitle {
+  color: var(--security-text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem 0;
+  line-height: 1.3;
+}
+
+.security-description {
+  color: var(--security-text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.security-text {
+  color: var(--security-text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.security-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.security-list li {
+  color: var(--security-text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.security-list li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.security-card {
+  background-color: var(--security-bg-secondary);
+  border: 1px solid var(--security-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.security-card h3 {
+  color: var(--security-text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.security-card p {
+  color: var(--security-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.security-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.security-card ul li {
+  color: var(--security-text-secondary);
+  margin-bottom: 0.25rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.security-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--security-accent);
+  font-weight: bold;
+}
+
+/* Código com melhor contraste */
+.security-code {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border: 1px solid var(--security-border);
+}
+
+/* Botões e elementos interativos */
+.security-button {
+  background-color: var(--security-accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.security-button:hover {
+  background-color: #0b5ed7;
+}
+
+/* Alertas e notificações */
+.security-alert {
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-left: 4px solid;
+}
+
+.security-alert-warning {
+  background-color: #fff3cd;
+  border-left-color: #ffc107;
+  color: #664d03;
+}
+
+.security-alert-info {
+  background-color: #d1ecf1;
+  border-left-color: #0dcaf0;
+  color: #055160;
+}
+
+.security-alert-success {
+  background-color: #d1e7dd;
+  border-left-color: #198754;
+  color: #0f5132;
+}
+
+.security-alert-danger {
+  background-color: #f8d7da;
+  border-left-color: #dc3545;
+  color: #721c24;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .security-container {
+    padding: 1rem;
+  }
+  
+  .security-title {
+    font-size: 1.5rem;
+  }
+  
+  .security-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+/* Melhorias de acessibilidade */
+.security-container:focus-within {
+  outline: 2px solid var(--security-accent);
+  outline-offset: 2px;
+}
+
+/* Contraste aprimorado para texto */
+.security-high-contrast {
+  color: var(--security-text-primary);
+  font-weight: 500;
+}
+
+.security-muted {
+  color: var(--security-text-muted);
+  font-size: 0.875rem;
+}
+
+/* Classes para componentes de integração */
+.security-practices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.security-practice-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid;
+}
+
+.security-practice-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.security-practice-card h3 {
+  color: var(--security-text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.security-practice-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.security-practice-card ul li {
+  color: var(--security-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.security-practice-card ul li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.875rem;
+}
+
+/* Cards específicos por categoria */
+.security-practice-auth {
+  background: #1b5e20;
+  border-color: #4caf50;
+}
+
+.security-practice-auth h3 {
+  color: #ffffff;
+}
+
+.security-practice-auth ul li {
+  color: #e8f5e8;
+}
+
+.security-practice-auth ul li::before {
+  content: "🔐";
+}
+
+.security-practice-authorization {
+  background: #0d47a1;
+  border-color: #2196f3;
+}
+
+.security-practice-authorization h3 {
+  color: #ffffff;
+}
+
+.security-practice-authorization ul li {
+  color: #e3f2fd;
+}
+
+.security-practice-authorization ul li::before {
+  content: "👥";
+}
+
+.security-practice-data {
+  background: #e65100;
+  border-color: #ff9800;
+}
+
+.security-practice-data h3 {
+  color: #ffffff;
+}
+
+.security-practice-data ul li {
+  color: #fff3e0;
+}
+
+.security-practice-data ul li::before {
+  content: "🔒";
+}
+
+.security-practice-monitoring {
+  background: #4a148c;
+  border-color: #9c27b0;
+}
+
+.security-practice-monitoring h3 {
+  color: #ffffff;
+}
+
+.security-practice-monitoring ul li {
+  color: #f3e5f5;
+}
+
+.security-practice-monitoring ul li::before {
+  content: "📊";
+}
+
+/* Alertas de segurança */
+.security-warning-alert {
+  background: #ff8f00;
+  border: 2px solid #ffc107;
+  border-left: 4px solid #ffc107;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(255, 193, 7, 0.1);
+}
+
+.security-warning-alert h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.security-warning-alert ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.security-warning-alert ul li {
+  color: #fff3cd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-weight: 500;
+}
+
+.security-warning-alert ul li::before {
+  content: "🔒";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.875rem;
+}
+
+/* Classes para exemplos de código */
+.security-code-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.security-code-example {
+  background: var(--security-bg-secondary);
+  border: 2px solid var(--security-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.security-code-example:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.security-code-example h3 {
+  color: var(--security-text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.security-code-example pre {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  border: 1px solid var(--security-border);
+  margin: 0;
+}
+
+/* Cores específicas para diferentes tipos de código */
+.security-code-react {
+  border-color: #61dafb;
+  background: #0d47a1;
+}
+
+.security-code-react h3 {
+  color: #ffffff;
+}
+
+.security-code-react h3::before {
+  content: "⚛️";
+}
+
+.security-code-component {
+  border-color: #4caf50;
+  background: #1b5e20;
+}
+
+.security-code-component h3 {
+  color: #ffffff;
+}
+
+.security-code-component h3::before {
+  content: "🧩";
+}
+
+.security-code-app {
+  border-color: #ff9800;
+  background: #e65100;
+}
+
+.security-code-app h3 {
+  color: #ffffff;
+}
+
+.security-code-app h3::before {
+  content: "🚀";
+}
+
+/* Classes para módulos de segurança */
+.security-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.security-module-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid;
+}
+
+.security-module-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.security-module-card h3 {
+  color: var(--security-text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.security-module-card p {
+  color: var(--security-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.security-module-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.security-module-card ul li {
+  color: var(--security-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.security-module-card ul li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.875rem;
+}
+
+/* Cards específicos por tipo de módulo */
+.security-module-auth {
+  background: #1b5e20;
+  border-color: #4caf50;
+}
+
+.security-module-auth h3 {
+  color: #ffffff;
+}
+
+.security-module-auth p {
+  color: #e8f5e8;
+}
+
+.security-module-auth ul li {
+  color: #e8f5e8;
+}
+
+.security-module-auth ul li::before {
+  content: "🔐";
+}
+
+.security-module-users {
+  background: #0d47a1;
+  border-color: #2196f3;
+}
+
+.security-module-users h3 {
+  color: #ffffff;
+}
+
+.security-module-users p {
+  color: #e3f2fd;
+}
+
+.security-module-users ul li {
+  color: #e3f2fd;
+}
+
+.security-module-users ul li::before {
+  content: "👥";
+}
+
+.security-module-roles {
+  background: #4a148c;
+  border-color: #9c27b0;
+}
+
+.security-module-roles h3 {
+  color: #ffffff;
+}
+
+.security-module-roles p {
+  color: #f3e5f5;
+}
+
+.security-module-roles ul li {
+  color: #f3e5f5;
+}
+
+.security-module-roles ul li::before {
+  content: "👑";
+}
+
+.security-module-tokens {
+  background: #e65100;
+  border-color: #ff9800;
+}
+
+.security-module-tokens h3 {
+  color: #ffffff;
+}
+
+.security-module-tokens p {
+  color: #fff3e0;
+}
+
+.security-module-tokens ul li {
+  color: #fff3e0;
+}
+
+.security-module-tokens ul li::before {
+  content: "🔑";
+}
+
+.security-module-devices {
+  background: #00695c;
+  border-color: #009688;
+}
+
+.security-module-devices h3 {
+  color: #ffffff;
+}
+
+.security-module-devices p {
+  color: #e0f2f1;
+}
+
+.security-module-devices ul li {
+  color: #e0f2f1;
+}
+
+.security-module-devices ul li::before {
+  content: "📱";
+}
+
+.security-module-domains {
+  background: #bf360c;
+  border-color: #ff5722;
+}
+
+.security-module-domains h3 {
+  color: #ffffff;
+}
+
+.security-module-domains p {
+  color: #ffebee;
+}
+
+.security-module-domains ul li {
+  color: #ffebee;
+}
+
+.security-module-domains ul li::before {
+  content: "🌐";
+}
+
+/* Classes para camadas de segurança */
+.security-layers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.security-layer-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.security-layer-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--security-accent), var(--security-success));
+}
+
+.security-layer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.security-layer-card h3 {
+  color: var(--security-text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.security-layer-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.security-layer-card ul li {
+  color: var(--security-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border-radius: 6px;
+  border-left: 3px solid;
+}
+
+.security-layer-card ul li::before {
+  content: "🛡️";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Cards específicos por tipo de camada */
+.security-layer-auth {
+  background: #1b5e20;
+  border-color: #4caf50;
+}
+
+.security-layer-auth h3 {
+  color: #ffffff;
+}
+
+.security-layer-auth ul li {
+  color: #e8f5e8;
+  border-left-color: #4caf50;
+}
+
+.security-layer-auth ul li::before {
+  content: "🔐";
+}
+
+.security-layer-authorization {
+  background: #0d47a1;
+  border-color: #2196f3;
+}
+
+.security-layer-authorization h3 {
+  color: #ffffff;
+}
+
+.security-layer-authorization ul li {
+  color: #e3f2fd;
+  border-left-color: #2196f3;
+}
+
+.security-layer-authorization ul li::before {
+  content: "👥";
+}
+
+.security-layer-performance {
+  background: #e65100;
+  border-color: #ff9800;
+}
+
+.security-layer-performance h3 {
+  color: #ffffff;
+}
+
+.security-layer-performance ul li {
+  color: #fff3e0;
+  border-left-color: #ff9800;
+}
+
+.security-layer-performance ul li::before {
+  content: "⚡";
+}
+
+.security-layer-validation {
+  background: #4a148c;
+  border-color: #9c27b0;
+}
+
+.security-layer-validation h3 {
+  color: #ffffff;
+}
+
+.security-layer-validation ul li {
+  color: #f3e5f5;
+  border-left-color: #9c27b0;
+}
+
+.security-layer-validation ul li::before {
+  content: "🔒";
+}
+
+.security-layer-monitoring {
+  background: #00695c;
+  border-color: #009688;
+}
+
+.security-layer-monitoring h3 {
+  color: #ffffff;
+}
+
+.security-layer-monitoring ul li {
+  color: #e0f2f1;
+  border-left-color: #009688;
+}
+
+.security-layer-monitoring ul li::before {
+  content: "📊";
+}
+
+.security-layer-data {
+  background: #bf360c;
+  border-color: #ff5722;
+}
+
+.security-layer-data h3 {
+  color: #ffffff;
+}
+
+.security-layer-data ul li {
+  color: #ffebee;
+  border-left-color: #ff5722;
+}
+
+.security-layer-data ul li::before {
+  content: "💾";
+}
+
+/* Resumo das camadas */
+.security-layers-summary {
+  background: var(--security-bg-secondary);
+  border: 2px solid var(--security-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.security-layers-summary h3 {
+  color: var(--security-text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.security-layers-summary h3::before {
+  content: "📊";
+}
+
+.security-layers-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.security-layer-metric {
+  text-align: center;
+  padding: 1rem;
+  background: var(--security-bg-tertiary);
+  border-radius: 8px;
+  border: 1px solid var(--security-border);
+}
+
+.security-layer-metric .metric-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.security-layer-metric .metric-label {
+  color: var(--security-text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.security-layer-metric.auth .metric-value {
+  color: #4caf50;
+}
+
+.security-layer-metric.authorization .metric-value {
+  color: #2196f3;
+}
+
+.security-layer-metric.performance .metric-value {
+  color: #ff9800;
+}
+
+.security-layer-metric.validation .metric-value {
+  color: #9c27b0;
+}
+
+.security-layer-metric.monitoring .metric-value {
+  color: #009688;
+}
+
+.security-layer-metric.data .metric-value {
+  color: #ff5722;
+}
+
+/* Responsividade para práticas */
+@media (max-width: 768px) {
+  .security-practices-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .security-practice-card {
+    padding: 1rem;
+  }
+  
+  .security-practice-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .security-code-examples {
+    gap: 1.5rem;
+  }
+  
+  .security-code-example {
+    padding: 1rem;
+  }
+  
+  .security-code-example pre {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  
+  .security-modules-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .security-module-card {
+    padding: 1rem;
+  }
+  
+  .security-module-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .security-layers-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .security-layer-card {
+    padding: 1rem;
+  }
+  
+  .security-layer-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .security-layers-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
