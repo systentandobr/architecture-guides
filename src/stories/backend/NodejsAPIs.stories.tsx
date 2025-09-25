@@ -305,7 +305,7 @@ export const NodejsBusinessRules: Story = {
   ),
 };
 
-export const IntegrationFlow: Story = {
+export const NodejsIntegrationFlow: Story = {
   render: () => (
     <IntegrationFlow
       title="🔄 Fluxo de Integração - Node.js APIs"

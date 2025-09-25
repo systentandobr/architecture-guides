@@ -252,7 +252,7 @@ export const GolangBusinessRules: Story = {
   ),
 };
 
-export const IntegrationFlow: Story = {
+export const GolangIntegrationFlow: Story = {
   render: () => (
     <IntegrationFlow
       title="🔄 Fluxo de Integração - Golang APIs"

@@ -252,7 +252,7 @@ export const PythonBusinessRules: Story = {
   ),
 };
 
-export const IntegrationFlow: Story = {
+export const PythonIntegrationFlow: Story = {
   render: () => (
     <IntegrationFlow
       title="🔄 Fluxo de Integração - Python APIs"
