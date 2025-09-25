@@ -3,7 +3,7 @@ import { ThemeProvider } from '../src/contexts/theme-context.jsx';
 import { themes } from '../src/styles/themes';
 import '../src/styles/globals.css';
 import '../src/stories/security/styles/theme.css';
-import '../src/styles/design-system.css';
+import '../src/styles/design-system-simple.css';
 
 import { fn } from '@storybook/test';
 

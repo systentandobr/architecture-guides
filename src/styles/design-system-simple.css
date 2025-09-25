@@ -1,0 +1,434 @@
+/* Design System Unificado - Systentando Ecosystem */
+/* Versão simplificada sem dependências do Tailwind CSS */
+
+/* Systentando Core Colors */
+:root {
+  --systentando-primary: #004f4f;
+  --systentando-primary-light: #006d6d;
+  --systentando-primary-dark: #003535;
+  --systentando-accent: #ff7d50;
+  --systentando-accent-light: #ff9b78;
+  --systentando-accent-dark: #dd5c30;
+  
+  /* Life Tracker Category Colors */
+  --health-color: #00b894;
+  --sleep-color: #9b59b6;
+  --personal-color: #e84393;
+  --work-color: #3498db;
+  --finance-color: #f39c12;
+  
+  /* Viral Kids Bronze Colors */
+  --bronze-color: #d4af37;
+  --copper-color: #d4af37;
+  --gold-color: #ffd700;
+  
+  /* Gamer Neon Colors */
+  --neon-blue: #00FFFF;
+  --neon-purple: #A259FF;
+  --neon-green: #39FF14;
+  --neon-pink: #FF00C8;
+}
+
+/* Button Styles */
+.ds-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.ds-button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Button Variants */
+.ds-button-systentando {
+  background-color: var(--systentando-primary);
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 79, 79, 0.3);
+}
+
+.ds-button-systentando:hover {
+  background-color: var(--systentando-primary-dark);
+}
+
+.ds-button-accent {
+  background-color: var(--systentando-accent);
+  color: white;
+}
+
+.ds-button-accent:hover {
+  background-color: var(--systentando-accent-dark);
+}
+
+.ds-button-health {
+  background-color: var(--health-color);
+  color: white;
+}
+
+.ds-button-sleep {
+  background-color: var(--sleep-color);
+  color: white;
+}
+
+.ds-button-personal {
+  background-color: var(--personal-color);
+  color: white;
+}
+
+.ds-button-work {
+  background-color: var(--work-color);
+  color: white;
+}
+
+.ds-button-finance {
+  background-color: var(--finance-color);
+  color: white;
+}
+
+.ds-button-bronze {
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  color: white;
+  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.3);
+}
+
+.ds-button-bronze:hover {
+  box-shadow: 0 0 40px rgba(53, 90, 60, 0.2);
+}
+
+.ds-button-neon {
+  background-color: var(--neon-blue);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  animation: neon-pulse 2s ease-in-out infinite;
+}
+
+.ds-button-gamer {
+  background: linear-gradient(135deg, #0A0A0A 0%, #1a1a2e 50%, #23234d 100%);
+  color: white;
+  border: 1px solid rgba(162, 89, 255, 0.5);
+}
+
+/* Button Sizes */
+.ds-button-sm {
+  height: 2.25rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.ds-button-lg {
+  height: 2.75rem;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+}
+
+.ds-button-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.5rem;
+}
+
+/* Card Styles */
+.ds-card {
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.ds-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.ds-card-systentando {
+  border-color: rgba(0, 79, 79, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 79, 79, 0.3);
+}
+
+.ds-card-health {
+  background-color: rgba(0, 184, 148, 0.1);
+  border-color: rgba(0, 184, 148, 0.3);
+  color: #00695c;
+}
+
+.ds-card-sleep {
+  background-color: rgba(155, 89, 182, 0.1);
+  border-color: rgba(155, 89, 182, 0.3);
+  color: #6a1b9a;
+}
+
+.ds-card-personal {
+  background-color: rgba(232, 67, 147, 0.1);
+  border-color: rgba(232, 67, 147, 0.3);
+  color: #ad1457;
+}
+
+.ds-card-work {
+  background-color: rgba(52, 152, 219, 0.1);
+  border-color: rgba(52, 152, 219, 0.3);
+  color: #1565c0;
+}
+
+.ds-card-finance {
+  background-color: rgba(243, 156, 18, 0.1);
+  border-color: rgba(243, 156, 18, 0.3);
+  color: #e65100;
+}
+
+.ds-card-bronze {
+  background: linear-gradient(145deg, rgba(212, 175, 55, 0.1), rgba(184, 134, 11, 0.1));
+  border-color: rgba(212, 175, 55, 0.2);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+}
+
+.ds-card-gamer {
+  background: linear-gradient(135deg, #0A0A0A 0%, #1a1a2e 50%, #23234d 100%);
+  color: white;
+  border-color: rgba(162, 89, 255, 0.5);
+}
+
+/* Card Components */
+.ds-card-header {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.ds-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.ds-card-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.ds-card-content {
+  padding: 1.5rem;
+  padding-top: 0;
+}
+
+.ds-card-footer {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  padding-top: 0;
+}
+
+/* Animations */
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue);
+  }
+}
+
+/* Utility Classes */
+.ds-text-gradient-systentando {
+  background: linear-gradient(90deg, var(--systentando-primary), var(--systentando-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ds-text-gradient-bronze {
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ds-glass-effect {
+  backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Grid Layouts */
+.ds-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.ds-grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.ds-grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ds-grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ds-grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ds-grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .ds-md\\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .ds-md\\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .ds-md\\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  
+  .ds-md\\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .ds-lg\\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Spacing */
+.ds-space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.ds-space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+.ds-gap-4 {
+  gap: 1rem;
+}
+
+.ds-gap-6 {
+  gap: 1.5rem;
+}
+
+/* Flexbox */
+.ds-flex {
+  display: flex;
+}
+
+.ds-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.ds-items-center {
+  align-items: center;
+}
+
+.ds-justify-center {
+  justify-content: center;
+}
+
+.ds-text-center {
+  text-align: center;
+}
+
+/* Text */
+.ds-text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.ds-text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.ds-text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.ds-font-semibold {
+  font-weight: 600;
+}
+
+.ds-font-bold {
+  font-weight: 700;
+}
+
+/* Colors */
+.ds-text-systentando {
+  color: var(--systentando-primary);
+}
+
+.ds-text-health {
+  color: var(--health-color);
+}
+
+.ds-text-sleep {
+  color: var(--sleep-color);
+}
+
+.ds-text-personal {
+  color: var(--personal-color);
+}
+
+.ds-text-work {
+  color: var(--work-color);
+}
+
+.ds-text-finance {
+  color: var(--finance-color);
+}
+
+.ds-text-bronze {
+  color: var(--bronze-color);
+}
+
+.ds-text-neon-blue {
+  color: var(--neon-blue);
+}
+
+.ds-text-white {
+  color: white;
+}
+
+/* Backgrounds */
+.ds-bg-gray-900 {
+  background-color: #111827;
+}
+
+.ds-bg-gray-800 {
+  background-color: #1f2937;
+}
+
+.ds-bg-gray-700 {
+  background-color: #374151;
+}
+
+.ds-rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.ds-p-6 {
+  padding: 1.5rem;
+}

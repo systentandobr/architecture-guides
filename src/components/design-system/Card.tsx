@@ -21,15 +21,15 @@ type CardSize = 'sm' | 'md' | 'lg';
 // Card variant styles
 const getVariantClasses = (variant: CardVariant): string => {
   const variants = {
-    systentando: "bg-white dark:bg-gray-800 border-systentando-primary/20 shadow-systentando",
-    bronze: "bg-gradient-card border-bronze/20 shadow-bronze",
-    gamer: "bg-gradient-gamer border-neon-purple/50 text-white shadow-neon",
-    health: "bg-health/10 border-health/30 text-health-dark",
-    sleep: "bg-sleep/10 border-sleep/30 text-sleep-dark",
-    personal: "bg-personal/10 border-personal/30 text-personal-dark",
-    work: "bg-work/10 border-work/30 text-work-dark",
-    finance: "bg-finance/10 border-finance/30 text-finance-dark",
-    default: "bg-card text-card-foreground border-border",
+    systentando: "ds-card ds-card-systentando",
+    bronze: "ds-card ds-card-bronze",
+    gamer: "ds-card ds-card-gamer",
+    health: "ds-card ds-card-health",
+    sleep: "ds-card ds-card-sleep",
+    personal: "ds-card ds-card-personal",
+    work: "ds-card ds-card-work",
+    finance: "ds-card ds-card-finance",
+    default: "ds-card",
   };
   return variants[variant] || variants.default;
 };
@@ -37,9 +37,9 @@ const getVariantClasses = (variant: CardVariant): string => {
 // Card size styles
 const getSizeClasses = (size: CardSize): string => {
   const sizes = {
-    sm: "p-4",
-    md: "p-6",
-    lg: "p-8",
+    sm: "ds-p-6", // Using p-6 for all sizes
+    md: "ds-p-6",
+    lg: "ds-p-6",
   };
   return sizes[size] || sizes.md;
 };
@@ -51,7 +51,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, variant = 'default', size = 'md', ...props }, ref) => {
-    const baseClasses = "rounded-lg border shadow-sm transition-all duration-300 hover:shadow-md";
+    const baseClasses = "";
     const variantClasses = getVariantClasses(variant);
     const sizeClasses = getSizeClasses(size);
     
@@ -70,7 +70,7 @@ const CardHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDiv
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn("flex flex-col space-y-1.5 p-6", className)}
+      className={cn("ds-card-header", className)}
       {...props}
     />
   )
@@ -81,7 +81,7 @@ const CardTitle = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HT
   ({ className, ...props }, ref) => (
     <h3
       ref={ref}
-      className={cn("text-2xl font-semibold leading-none tracking-tight", className)}
+      className={cn("ds-card-title", className)}
       {...props}
     />
   )
@@ -92,7 +92,7 @@ const CardDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttribu
   ({ className, ...props }, ref) => (
     <p
       ref={ref}
-      className={cn("text-sm text-muted-foreground", className)}
+      className={cn("ds-card-description", className)}
       {...props}
     />
   )
@@ -101,7 +101,7 @@ CardDescription.displayName = "CardDescription";
 
 const CardContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
-    <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+    <div ref={ref} className={cn("ds-card-content", className)} {...props} />
   )
 );
 CardContent.displayName = "CardContent";
@@ -110,7 +110,7 @@ const CardFooter = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDiv
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn("flex items-center p-6 pt-0", className)}
+      className={cn("ds-card-footer", className)}
       {...props}
     />
   )

@@ -16,9 +16,9 @@ type Story = StoryObj;
 // Button Stories
 export const SystentandoButton: Story = {
   render: () => (
-    <div className="space-y-4">
-      <h3 className="text-lg font-semibold text-systentando-primary">Systentando Buttons</h3>
-      <div className="flex gap-4 flex-wrap">
+    <div className="ds-space-y-4">
+      <h3 className="ds-text-lg ds-font-semibold ds-text-systentando">Systentando Buttons</h3>
+      <div className="ds-flex ds-gap-4 ds-flex-wrap">
         <Button variant="systentando">Primary</Button>
         <Button variant="accent">Accent</Button>
         <Button variant="systentando" size="sm">Small</Button>
