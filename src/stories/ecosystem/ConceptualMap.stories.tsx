@@ -301,7 +301,7 @@ export const DetailedRoadmap: Story = {
     <div className="ds-bg-gray-900 ds-min-h-screen ds-p-8">
       <div className="ds-max-w-6xl ds-mx-auto">
         <h1 className="ds-text-4xl ds-font-bold ds-text-white ds-mb-8 ds-text-center">
-          🗓️ Roadmap Detalhado 2024-2026
+          🗓️ Roadmap Detalhado 2025-2027
         </h1>
 
         {/* Timeline */}
@@ -309,12 +309,12 @@ export const DetailedRoadmap: Story = {
           {/* Linha do tempo */}
           <div className="ds-absolute ds-left-8 ds-top-0 ds-bottom-0 ds-w-1 ds-bg-gradient-to-b ds-from-green-500 ds-to-blue-500 ds-rounded"></div>
 
-          {/* 2024 - Base */}
+          {/* 2025 - Base */}
           <div className="ds-relative ds-mb-12 ds-pl-20">
             <div className="ds-absolute ds-left-6 ds-top-4 ds-w-4 ds-h-4 ds-bg-green-500 ds-rounded-full ds-border-2 ds-border-white"></div>
             <div className="ds-bg-gray-800 ds-p-6 ds-rounded-xl ds-border-l-4 ds-border-green-500">
               <div className="ds-flex ds-items-center ds-gap-4 ds-mb-4">
-                <span className="ds-bg-green-500 ds-text-white ds-px-3 ds-py-1 ds-rounded ds-font-bold">2024</span>
+                <span className="ds-bg-green-500 ds-text-white ds-px-3 ds-py-1 ds-rounded ds-font-bold">2025</span>
                 <h2 className="ds-text-2xl ds-font-bold ds-text-white">🏗️ Construção da Base</h2>
               </div>
               <div className="ds-grid ds-grid-cols-1 ds-md:grid-cols-2 ds-gap-6">
@@ -342,13 +342,13 @@ export const DetailedRoadmap: Story = {
             </div>
           </div>
 
-          {/* 2025 - Desenvolvimento */}
+          {/* 2026 - Validação */}
           <div className="ds-relative ds-mb-12 ds-pl-20">
             <div className="ds-absolute ds-left-6 ds-top-4 ds-w-4 ds-h-4 ds-bg-blue-500 ds-rounded-full ds-border-2 ds-border-white"></div>
             <div className="ds-bg-gray-800 ds-p-6 ds-rounded-xl ds-border-l-4 ds-border-blue-500">
               <div className="ds-flex ds-items-center ds-gap-4 ds-mb-4">
-                <span className="ds-bg-blue-500 ds-text-white ds-px-3 ds-py-1 ds-rounded ds-font-bold">2025</span>
-                <h2 className="ds-text-2xl ds-font-bold ds-text-white">🚀 Desenvolvimento e Testes</h2>
+                <span className="ds-bg-blue-500 ds-text-white ds-px-3 ds-py-1 ds-rounded ds-font-bold">2026</span>
+                <h2 className="ds-text-2xl ds-font-bold ds-text-white">🔍 Validação de Modelos de Negócio</h2>
               </div>
               <div className="ds-grid ds-grid-cols-1 ds-md:grid-cols-3 ds-gap-6">
                 <div>
@@ -382,12 +382,12 @@ export const DetailedRoadmap: Story = {
             </div>
           </div>
 
-          {/* Q1 2026 - Produção */}
+          {/* 2027 - Produção */}
           <div className="ds-relative ds-mb-12 ds-pl-20">
             <div className="ds-absolute ds-left-6 ds-top-4 ds-w-4 ds-h-4 ds-bg-purple-500 ds-rounded-full ds-border-2 ds-border-white"></div>
             <div className="ds-bg-gray-800 ds-p-6 ds-rounded-xl ds-border-l-4 ds-border-purple-500">
               <div className="ds-flex ds-items-center ds-gap-4 ds-mb-4">
-                <span className="ds-bg-purple-500 ds-text-white ds-px-3 ds-py-1 ds-rounded ds-font-bold">Q1 2026</span>
+                <span className="ds-bg-purple-500 ds-text-white ds-px-3 ds-py-1 ds-rounded ds-font-bold">2027</span>
                 <h2 className="ds-text-2xl ds-font-bold ds-text-white">🌟 Lançamento em Produção</h2>
               </div>
               <div className="ds-grid ds-grid-cols-1 ds-md:grid-cols-3 ds-gap-6">

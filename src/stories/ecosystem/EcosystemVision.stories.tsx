@@ -158,15 +158,15 @@ export const DetailedRoadmap: Story = {
     <div className="ds-bg-gray-900 ds-min-h-screen ds-p-8">
       <div className="ds-max-w-6xl ds-mx-auto">
         <h1 className="ds-text-4xl ds-font-bold ds-text-white ds-mb-8 ds-text-center">
-          🗓️ Roadmap Detalhado
+          🗓️ Roadmap Detalhado 2025-2027
         </h1>
 
         {/* Timeline */}
         <div className="ds-space-y-8">
-          {/* 2024 - Base */}
+          {/* 2025 - Base */}
           <div className="ds-bg-gray-800 ds-p-6 ds-rounded-xl ds-border-l-4 ds-border-green-500">
             <div className="ds-flex ds-items-center ds-gap-4 ds-mb-4">
-              <span className="ds-bg-green-500 ds-text-white ds-px-3 ds-py-1 ds-rounded ds-font-bold">2024</span>
+              <span className="ds-bg-green-500 ds-text-white ds-px-3 ds-py-1 ds-rounded ds-font-bold">2025</span>
               <h2 className="ds-text-2xl ds-font-bold ds-text-white">🏗️ Construção da Base</h2>
             </div>
             <div className="ds-grid ds-grid-cols-1 ds-md:grid-cols-2 ds-gap-6">
@@ -191,19 +191,19 @@ export const DetailedRoadmap: Story = {
             </div>
           </div>
 
-          {/* 2025 - Desenvolvimento */}
+          {/* 2026 - Validação */}
           <div className="ds-bg-gray-800 ds-p-6 ds-rounded-xl ds-border-l-4 ds-border-blue-500">
             <div className="ds-flex ds-items-center ds-gap-4 ds-mb-4">
-              <span className="ds-bg-blue-500 ds-text-white ds-px-3 ds-py-1 ds-rounded ds-font-bold">2025</span>
-              <h2 className="ds-text-2xl ds-font-bold ds-text-white">🚀 Desenvolvimento e Testes</h2>
+              <span className="ds-bg-blue-500 ds-text-white ds-px-3 ds-py-1 ds-rounded ds-font-bold">2026</span>
+              <h2 className="ds-text-2xl ds-font-bold ds-text-white">🔍 Validação de Modelos de Negócio</h2>
             </div>
             <div className="ds-grid ds-grid-cols-1 ds-md:grid-cols-2 ds-gap-6">
               <div>
                 <h3 className="ds-text-lg ds-font-bold ds-text-blue-300 ds-mb-2">🎯 Objetivos</h3>
                 <ul className="ds-space-y-1 ds-text-gray-300">
-                  <li>• Alcançar resultados esperados</li>
+                  <li>• Validar modelos de negócio</li>
+                  <li>• Testar com usuários reais</li>
                   <li>• Refinamento dos MVPs</li>
-                  <li>• Testes com usuários reais</li>
                   <li>• Preparação para produção</li>
                 </ul>
               </div>
@@ -219,10 +219,10 @@ export const DetailedRoadmap: Story = {
             </div>
           </div>
 
-          {/* Q1 2026 - Produção */}
+          {/* 2027 - Produção */}
           <div className="ds-bg-gray-800 ds-p-6 ds-rounded-xl ds-border-l-4 ds-border-purple-500">
             <div className="ds-flex ds-items-center ds-gap-4 ds-mb-4">
-              <span className="ds-bg-purple-500 ds-text-white ds-px-3 ds-py-1 ds-rounded ds-font-bold">Q1 2026</span>
+              <span className="ds-bg-purple-500 ds-text-white ds-px-3 ds-py-1 ds-rounded ds-font-bold">2027</span>
               <h2 className="ds-text-2xl ds-font-bold ds-text-white">🌟 Lançamento em Produção</h2>
             </div>
             <div className="ds-grid ds-grid-cols-1 ds-md:grid-cols-3 ds-gap-6">
