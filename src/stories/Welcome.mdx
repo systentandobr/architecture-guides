@@ -3,15 +3,32 @@ import { Meta, Source, Unstyled } from '@storybook/blocks';
 <Meta title="Home" />
 
 <Unstyled>
-  <div style={{ margin: '0 auto', maxWidth: '800px', padding: '2rem' }}>
-    <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+  <div style={{ margin: '0 auto', maxWidth: '1000px', padding: '2rem' }}>
+    <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
       <img 
         src="./stories/assets/systentando-logo.png" 
         alt="Systentando Logo" 
         style={{ maxWidth: '200px', height: 'auto', margin: '0 auto 1rem' }} 
       />
-      <h1 style={{ fontWeight: 'bold', fontSize: '2.5rem' }}>Systentando Design System</h1>
-      <p style={{ fontSize: '1.2rem' }}>Documentação oficial de componentes e guias de arquitetura</p>
+      <h1 style={{ fontWeight: 'bold', fontSize: '3rem', color: '#004f4f', marginBottom: '1rem' }}>
+        Systentando Architecture Guides
+      </h1>
+      <p style={{ fontSize: '1.4rem', color: '#666', marginBottom: '2rem' }}>
+        Guia Arquitetural Completo do Ecossistema Systentando
+      </p>
+      <div style={{ 
+        padding: '1.5rem', 
+        backgroundColor: '#004f4f', 
+        color: 'white', 
+        borderRadius: '12px',
+        marginBottom: '2rem'
+      }}>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>🚀 Transformando o Empreendedorismo Brasileiro</h2>
+        <p style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
+          Este guia apresenta todos os módulos, funcionalidades e integrações do ecossistema Systentando, 
+          mostrando como estamos construindo uma plataforma completa para revolucionar o empreendedorismo no Brasil.
+        </p>
+      </div>
     </div>
 
     <div style={{ margin: '3rem 0', padding: '2rem', backgroundColor: '#f5f8fa', borderRadius: '8px' }}>
@@ -61,19 +78,136 @@ function App() {
       />
     </div>
 
-    <h2 style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>Ecossistema Systentando</h2>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-      <div style={{ padding: '1.5rem', backgroundColor: '#004f4f', color: 'white', borderRadius: '6px' }}>
-        <h3 style={{ marginBottom: '0.5rem', fontSize: '1.1rem', fontWeight: 'bold' }}>ZEN Launcher</h3>
-        <p style={{ fontSize: '0.9rem' }}>Produtividade e foco</p>
+    <h2 style={{ marginBottom: '2rem', fontSize: '2rem', color: '#004f4f', textAlign: 'center' }}>🏗️ Ecossistema Systentando</h2>
+    
+    <div style={{ 
+      display: 'grid', 
+      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+      gap: '1.5rem', 
+      marginBottom: '3rem' 
+    }}>
+      <div style={{ 
+        padding: '2rem', 
+        backgroundColor: '#004f4f', 
+        color: 'white', 
+        borderRadius: '12px',
+        boxShadow: '0 4px 20px rgba(0, 79, 79, 0.3)'
+      }}>
+        <h3 style={{ marginBottom: '1rem', fontSize: '1.3rem', fontWeight: 'bold' }}>🌐 Systentando Landing</h3>
+        <p style={{ fontSize: '1rem', marginBottom: '1rem' }}>Plataforma principal do ecossistema</p>
+        <div style={{ fontSize: '0.9rem', opacity: '0.9' }}>
+          <p><strong>Domínio:</strong> systentando.com</p>
+          <p><strong>Stack:</strong> Next.js + Tailwind CSS</p>
+          <p><strong>Funcionalidades:</strong> Arena, Gamificação, Integrações</p>
+        </div>
       </div>
-      <div style={{ padding: '1.5rem', backgroundColor: '#ff7d50', color: 'white', borderRadius: '6px' }}>
-        <h3 style={{ marginBottom: '0.5rem', fontSize: '1.1rem', fontWeight: 'bold' }}>Meu Nutri</h3>
-        <p style={{ fontSize: '0.9rem' }}>Nutrição e bem-estar</p>
+      
+      <div style={{ 
+        padding: '2rem', 
+        backgroundColor: '#ff7d50', 
+        color: 'white', 
+        borderRadius: '12px',
+        boxShadow: '0 4px 20px rgba(255, 125, 80, 0.3)'
+      }}>
+        <h3 style={{ marginBottom: '1rem', fontSize: '1.3rem', fontWeight: 'bold' }}>🥗 Meu Nutri</h3>
+        <p style={{ fontSize: '1rem', marginBottom: '1rem' }}>Plataforma de nutrição personalizada</p>
+        <div style={{ fontSize: '0.9rem', opacity: '0.9' }}>
+          <p><strong>Stack:</strong> React + HeroUI</p>
+          <p><strong>Funcionalidades:</strong> Planos nutricionais, Tracking, IA</p>
+          <p><strong>Integração:</strong> WhatsApp, Gamificação</p>
+        </div>
       </div>
-      <div style={{ padding: '1.5rem', backgroundColor: '#3b5998', color: 'white', borderRadius: '6px' }}>
-        <h3 style={{ marginBottom: '0.5rem', fontSize: '1.1rem', fontWeight: 'bold' }}>Momento do Investimento</h3>
-        <p style={{ fontSize: '0.9rem' }}>Finanças e investimentos</p>
+      
+      <div style={{ 
+        padding: '2rem', 
+        backgroundColor: '#00b894', 
+        color: 'white', 
+        borderRadius: '12px',
+        boxShadow: '0 4px 20px rgba(0, 184, 148, 0.3)'
+      }}>
+        <h3 style={{ marginBottom: '1rem', fontSize: '1.3rem', fontWeight: 'bold' }}>📊 Life Tracker</h3>
+        <p style={{ fontSize: '1rem', marginBottom: '1rem' }}>Sistema de tracking pessoal</p>
+        <div style={{ fontSize: '0.9rem', opacity: '0.9' }}>
+          <p><strong>Stack:</strong> React + Tailwind CSS</p>
+          <p><strong>Categorias:</strong> Saúde, Sono, Pessoal, Trabalho, Finanças</p>
+          <p><strong>Backend:</strong> Node.js + MongoDB</p>
+        </div>
+      </div>
+      
+      <div style={{ 
+        padding: '2rem', 
+        backgroundColor: '#d4af37', 
+        color: 'white', 
+        borderRadius: '12px',
+        boxShadow: '0 4px 20px rgba(212, 175, 55, 0.3)'
+      }}>
+        <h3 style={{ marginBottom: '1rem', fontSize: '1.3rem', fontWeight: 'bold' }}>🧸 Viral Kids</h3>
+        <p style={{ fontSize: '1rem', marginBottom: '1rem' }}>E-commerce educativo infantil</p>
+        <div style={{ fontSize: '0.9rem', opacity: '0.9' }}>
+          <p><strong>Stack:</strong> Next.js + Tailwind CSS</p>
+          <p><strong>Funcionalidades:</strong> Produtos, WhatsApp, Gamificação</p>
+          <p><strong>Design:</strong> Bronze, Copper, Gold</p>
+        </div>
+      </div>
+      
+      <div style={{ 
+        padding: '2rem', 
+        backgroundColor: '#9b59b6', 
+        color: 'white', 
+        borderRadius: '12px',
+        boxShadow: '0 4px 20px rgba(155, 89, 182, 0.3)'
+      }}>
+        <h3 style={{ marginBottom: '1rem', fontSize: '1.3rem', fontWeight: 'bold' }}>🎮 Gamer Theme</h3>
+        <p style={{ fontSize: '1rem', marginBottom: '1rem' }}>Interface gamificada</p>
+        <div style={{ fontSize: '0.9rem', opacity: '0.9' }}>
+          <p><strong>Estilo:</strong> Cyberpunk, Neon</p>
+          <p><strong>Cores:</strong> Azul, Roxo, Verde, Rosa</p>
+          <p><strong>Funcionalidades:</strong> Stats, Achievements, Leaderboard</p>
+        </div>
+      </div>
+      
+      <div style={{ 
+        padding: '2rem', 
+        backgroundColor: '#3498db', 
+        color: 'white', 
+        borderRadius: '12px',
+        boxShadow: '0 4px 20px rgba(52, 152, 219, 0.3)'
+      }}>
+        <h3 style={{ marginBottom: '1rem', fontSize: '1.3rem', fontWeight: 'bold' }}>🏗️ Backend Monorepo</h3>
+        <p style={{ fontSize: '1rem', marginBottom: '1rem' }}>Arquitetura de microserviços</p>
+        <div style={{ fontSize: '0.9rem', opacity: '0.9' }}>
+          <p><strong>Stack:</strong> Node.js, Golang, Python</p>
+          <p><strong>Serviços:</strong> Auth, Payments, AI, Analytics</p>
+          <p><strong>Infra:</strong> MongoDB, Redis, Docker</p>
+        </div>
+      </div>
+    </div>
+
+    <div style={{ 
+      padding: '2rem', 
+      backgroundColor: '#f8f9fa', 
+      borderRadius: '12px',
+      marginBottom: '2rem',
+      border: '2px solid #004f4f'
+    }}>
+      <h3 style={{ fontSize: '1.5rem', color: '#004f4f', marginBottom: '1rem' }}>🎯 Próximos Passos</h3>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+        <div>
+          <h4 style={{ color: '#004f4f', marginBottom: '0.5rem' }}>🚀 Expansão</h4>
+          <p style={{ fontSize: '0.9rem' }}>Novos módulos e funcionalidades</p>
+        </div>
+        <div>
+          <h4 style={{ color: '#004f4f', marginBottom: '0.5rem' }}>🤖 IA Avançada</h4>
+          <p style={{ fontSize: '0.9rem' }}>Integração de inteligência artificial</p>
+        </div>
+        <div>
+          <h4 style={{ color: '#004f4f', marginBottom: '0.5rem' }}>🌍 Escala Global</h4>
+          <p style={{ fontSize: '0.9rem' }}>Expansão internacional</p>
+        </div>
+        <div>
+          <h4 style={{ color: '#004f4f', marginBottom: '0.5rem' }}>📱 Mobile First</h4>
+          <p style={{ fontSize: '0.9rem' }}>Aplicativos móveis nativos</p>
+        </div>
       </div>
     </div>
 
