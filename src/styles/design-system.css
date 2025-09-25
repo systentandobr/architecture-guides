@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System Unificado - Systentando Ecosystem */
+@layer base {
+  :root {
+    /* Systentando Core Variables */
+    --systentando-primary: #004f4f;
+    --systentando-primary-light: #006d6d;
+    --systentando-primary-dark: #003535;
+    --systentando-accent: #ff7d50;
+    --systentando-accent-light: #ff9b78;
+    --systentando-accent-dark: #dd5c30;
+    
+    /* Life Tracker Category Colors */
+    --health-color: #00b894;
+    --sleep-color: #9b59b6;
+    --personal-color: #e84393;
+    --work-color: #3498db;
+    --finance-color: #f39c12;
+    
+    /* Viral Kids Bronze Theme */
+    --bronze: 25 95% 53%;
+    --bronze-light: 30 80% 70%;
+    --bronze-dark: 20 90% 40%;
+    --copper: 15 85% 45%;
+    --gold: 45 95% 60%;
+    
+    /* Standard Design System */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    
+    /* Gradients */
+    --gradient-systentando: linear-gradient(135deg, #004f4f 0%, #006d6d 50%, #ff7d50 100%);
+    --gradient-bronze: linear-gradient(135deg, hsl(25 95% 53%), hsl(15 85% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(35 90% 60%) 50%, hsl(45 95% 60%) 100%);
+    --gradient-gamer: linear-gradient(135deg, #0A0A0A 0%, #1a1a2e 50%, #23234d 100%);
+    
+    /* Shadows */
+    --shadow-systentando: 0 4px 20px rgba(0, 79, 79, 0.3);
+    --shadow-bronze: 0 10px 30px -10px hsl(25 95% 53% / 0.3);
+    --shadow-glow: 0 0 40px hsl(35 90% 60% / 0.2);
+    --shadow-neon: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Systentando Components */
+  .btn-systentando {
+    @apply bg-systentando-primary hover:bg-systentando-primary-dark text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 shadow-systentando;
+  }
+  
+  .btn-accent {
+    @apply bg-systentando-accent hover:bg-systentando-accent-dark text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300;
+  }
+  
+  .card-systentando {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6;
+  }
+  
+  /* Life Tracker Category Components */
+  .btn-health {
+    @apply bg-health hover:bg-health-dark text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300;
+  }
+  
+  .btn-sleep {
+    @apply bg-sleep hover:bg-sleep-dark text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300;
+  }
+  
+  .btn-personal {
+    @apply bg-personal hover:bg-personal-dark text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300;
+  }
+  
+  .btn-work {
+    @apply bg-work hover:bg-work-dark text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300;
+  }
+  
+  .btn-finance {
+    @apply bg-finance hover:bg-finance-dark text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300;
+  }
+  
+  /* Viral Kids Bronze Components */
+  .btn-bronze {
+    @apply bg-gradient-bronze text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 shadow-bronze hover:shadow-glow;
+  }
+  
+  .card-bronze {
+    @apply bg-gradient-card rounded-lg shadow-card p-6 border border-bronze/20;
+  }
+  
+  /* Gamer Theme Components */
+  .btn-neon {
+    @apply bg-neon-blue text-black font-bold py-2 px-4 rounded-lg transition-all duration-300 shadow-neon hover:animate-neon-pulse;
+  }
+  
+  .card-gamer {
+    @apply bg-gradient-gamer rounded-lg border border-neon-purple/50 p-6 text-white;
+  }
+  
+  /* Utility Classes */
+  .text-gradient-systentando {
+    @apply bg-gradient-to-r from-systentando-primary to-systentando-accent bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-bronze {
+    @apply bg-gradient-bronze bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/10 border border-white/20;
+  }
+  
+  .neon-glow {
+    @apply shadow-neon animate-neon-pulse;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .animate-neon-pulse {
+    animation: neon-pulse 2s ease-in-out infinite;
+  }
+  
+  /* Gradient utilities */
+  .bg-gradient-systentando {
+    background: var(--gradient-systentando);
+  }
+  
+  .bg-gradient-bronze {
+    background: var(--gradient-bronze);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-gamer {
+    background: var(--gradient-gamer);
+  }
+  
+  /* Shadow utilities */
+  .shadow-systentando {
+    box-shadow: var(--shadow-systentando);
+  }
+  
+  .shadow-bronze {
+    box-shadow: var(--shadow-bronze);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-neon {
+    box-shadow: var(--shadow-neon);
+  }
+}
